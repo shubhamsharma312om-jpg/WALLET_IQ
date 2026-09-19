@@ -25,6 +25,7 @@ import { ActivityLog } from './ActivityLog.tsx';
 import { MonthlyReview } from './MonthlyReview.tsx';
 import { GuardrailPanel } from './GuardrailPanel.tsx';
 import { DemoCaseQuickBar } from './DemoCaseQuickBar.tsx';
+import { AutoCancelCenter } from './AutoCancelCenter.tsx';
 import {
   Subscription,
   Decision,
@@ -34,7 +35,7 @@ import {
   WorkflowProgress,
 } from '../../../backend/models/index.ts';
 
-export type WorkspacePage = 'overview' | 'subscriptions' | 'actions' | 'activity' | 'settings';
+export type WorkspacePage = 'overview' | 'subscriptions' | 'actions' | 'automation' | 'activity' | 'settings';
 
 interface MainDashboardProps {
   page?: WorkspacePage;
@@ -591,6 +592,13 @@ export const MainDashboard: React.FC<MainDashboardProps> = ({
             </>
           )}
 
+          {page === 'automation' && (
+            <>
+              <div className="wallet-section-heading"><div><p className="wallet-eyebrow">AUTOMATION</p><h1>Auto Cancel & Reminders</h1><p>Set rules to automatically drop inactive subscriptions or alert you before renewals.</p></div></div>
+              <AutoCancelCenter userId={dataMode === 'practical' ? 'u_practical' : 'u_301'} />
+            </>
+          )}
+
           {page === 'activity' && (
             <>
               <div className="wallet-section-heading"><div><p className="wallet-eyebrow">TRACEABLE BY DESIGN</p><h1>Activity & savings</h1><p>See what the system detected, recommended and changed over time.</p></div></div>
@@ -652,3 +660,4 @@ export const MainDashboard: React.FC<MainDashboardProps> = ({
     </div>
   );
 };
+

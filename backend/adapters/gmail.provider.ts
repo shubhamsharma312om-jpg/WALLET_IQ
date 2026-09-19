@@ -529,3 +529,62 @@ export class GmailProvider {
     };
   }
 }
+
+export function extractRenewalDate(text: string, referenceDate = new Date()): string | null {
+  if (!text) return null;
+  const compact = text.replace(/\s+/g, ' ');
+  const cue = /(renew(?:s|al|ing)?|next\s+(?:payment|billing|charge)|billing\s+date|charged\s+on|payment\s+date)/i;
+  const cueMatch = compact.match(cue);
+  if (!cueMatch || cueMatch.index === undefined) return null;
+
+  const windowStart = Math.max(0, cueMatch.index - 20);
+  const windowText = compact.slice(windowStart, Math.min(compact.length, cueMatch.index + 140));
+
+  const monthPattern = '(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Sept|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)';
+  const patterns = [
+    new RegExp(`${monthPattern}\\s+(\\d{1,2})(?:st|nd|rd|th)?(?:,?\\s+(\\d{4}))?`, 'i'),
+    new RegExp(`(\\d{1,2})(?:st|nd|rd|th)?\\s+${monthPattern}(?:\\s+(\\d{4}))?`, 'i'),
+    /\b(20\d{2})-(\d{1,2})-(\d{1,2})\b/,
+  ];
+
+  for (let i = 0; i < patterns.length; i++) {
+    const match = windowText.match(patterns[i]);
+    if (!match) continue;
+
+    let parsed: Date | null = null;
+    if (i === 0) {
+      const monthName = match[1];
+      const day = Number(match[2]);
+      let year = match[3] ? Number(match[3]) : referenceDate.getUTCFullYear();
+      parsed = new Date(`${monthName} ${day}, ${year} 09:00:00 UTC`);
+      if (!match[3] && parsed.getTime() < referenceDate.getTime() - 24 * 60 * 60 * 1000) {
+        year += 1;
+        parsed = new Date(`${monthName} ${day}, ${year} 09:00:00 UTC`);
+      }
+    } else if (i === 1) {
+      const day = Number(match[1]);
+      const monthName = match[2];
+      let year = match[3] ? Number(match[3]) : referenceDate.getUTCFullYear();
+      parsed = new Date(`${monthName} ${day}, ${year} 09:00:00 UTC`);
+      if (!match[3] && parsed.getTime() < referenceDate.getTime() - 24 * 60 * 60 * 1000) {
+        year += 1;
+        parsed = new Date(`${monthName} ${day}, ${year} 09:00:00 UTC`);
+      }
+    } else if (i === 2) {
+      const year = Number(match[1]);
+      const month = Number(match[2]);
+      const day = Number(match[3]);
+      parsed = new Date(Date.UTC(year, month - 1, day, 9, 0, 0));
+    }
+
+    if (parsed && !Number.isNaN(parsed.getTime())) {
+      const diffYears = (parsed.getTime() - referenceDate.getTime()) / (365.25 * 24 * 60 * 60 * 1000);
+      if (diffYears > -5 && diffYears < 10) {
+        return parsed.toISOString();
+      }
+    }
+  }
+
+  return null;
+}
+

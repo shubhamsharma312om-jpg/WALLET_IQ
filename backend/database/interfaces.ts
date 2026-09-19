@@ -13,6 +13,9 @@ import {
   ActionResult,
   AuditEvent,
   SavingsSummary,
+  AutoCancelSettings,
+  AutoCancelState,
+  AutomationNotification,
 } from '../models/index.ts';
 import { ApprovalRequest, EscalationRecord } from '../block3-engine/action-types.ts';
 
@@ -57,6 +60,17 @@ export interface IDatabase {
   // Audit Events
   addAuditEvent(userId: string, event: AuditEvent): Promise<void>;
   getAuditEvents(userId: string): Promise<AuditEvent[]>;
+
+
+  // Auto-cancel automation
+  getAutoCancelSettings(userId: string): Promise<AutoCancelSettings>;
+  saveAutoCancelSettings(userId: string, settings: AutoCancelSettings): Promise<void>;
+  getAutoCancelStates(userId: string): Promise<AutoCancelState[]>;
+  getAutoCancelState(userId: string, subscriptionId: string): Promise<AutoCancelState | null>;
+  saveAutoCancelState(userId: string, state: AutoCancelState): Promise<void>;
+  addAutomationNotification(userId: string, notification: AutomationNotification): Promise<boolean>;
+  getAutomationNotifications(userId: string, unreadOnly?: boolean): Promise<AutomationNotification[]>;
+  markAutomationNotification(userId: string, id: number, updates: { read?: boolean; delivered?: boolean }): Promise<void>;
 
   // Savings
   getSavingsSummary(userId: string): Promise<SavingsSummary>;

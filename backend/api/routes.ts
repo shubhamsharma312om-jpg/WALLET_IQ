@@ -35,6 +35,21 @@ import { runAllTests } from '../../tests/run-all-tests.ts';
 import { Guardrails, WorkflowProgress } from '../models/index.ts';
 
 export function createApiRouter(): Router {
+  let autoCancelEngine = new AutoCancelEngine(db, orchestrator.block3Engine);
+
+  // Background automation interval
+  const automationTimer = setInterval(async () => {
+    try {
+      // Loop over known demo and practical users for background checking
+      const users = ['u_301', 'u_practical'];
+      for (const userId of users) {
+        const settings = await db.getAutoCancelSettings(userId);
+        if (settings.enabled) await autoCancelEngine.runCheck(userId);
+      }
+    } catch (err) {
+      console.error('AutoCancel background check error:', err);
+    }
+  }, 10 * 1000); // Poll every 10 seconds for demo purposes
   const router = Router();
 
   // Primary database instance
@@ -564,6 +579,207 @@ export function createApiRouter(): Router {
   });
 
 
+  // ==========================================
+  router.get('/automation/status', async (req: Request, res: Response) => {
+    try {
+      const userId = (req.query.userId as string) || 'u_301';
+      await ensureInitialSeed(userId);
+      const runCheck = req.query.runCheck === 'true';
+      const status = await autoCancelEngine.getStatus(userId, runCheck);
+      res.json({ success: true, ...status });
+    } catch (err: any) {
+      res.status(500).json({ success: false, error: err.message });
+    }
+  });
+
+  router.get('/automation/settings', async (req: Request, res: Response) => {
+    try {
+      const userId = (req.query.userId as string) || 'u_301';
+      await ensureInitialSeed(userId);
+      const settings = await db.getAutoCancelSettings(userId);
+      res.json({ success: true, settings });
+    } catch (err: any) {
+      res.status(500).json({ success: false, error: err.message });
+    }
+  });
+
+  router.put('/automation/settings', async (req: Request, res: Response) => {
+    try {
+      const userId = req.body.userId || 'u_301';
+      const incoming = req.body.settings as Partial<AutoCancelSettings>;
+      const current = await db.getAutoCancelSettings(userId);
+      const settings: AutoCancelSettings = {
+        ...current,
+        ...incoming,
+        inactivity_days: Math.max(1, Number(incoming?.inactivity_days ?? current.inactivity_days)),
+        first_reminder_days_before: Math.max(1, Number(incoming?.first_reminder_days_before ?? current.first_reminder_days_before)),
+        second_reminder_days_before: Math.max(1, Number(incoming?.second_reminder_days_before ?? current.second_reminder_days_before)),
+        final_window_hours: Number(incoming?.final_window_hours ?? current.final_window_hours) === 24 ? 24 : 48,
+      };
+      if (settings.second_reminder_days_before > settings.first_reminder_days_before) {
+        return res.status(400).json({ success: false, error: 'Second reminder must be closer to renewal than the first reminder.' });
+      }
+      await db.saveAutoCancelSettings(userId, settings);
+      const check = settings.enabled ? await autoCancelEngine.runCheck(userId) : null;
+      res.json({ success: true, settings, check });
+    } catch (err: any) {
+      res.status(500).json({ success: false, error: err.message });
+    }
+  });
+
+  router.post('/automation/run-check', async (req: Request, res: Response) => {
+    try {
+      const userId = req.body.userId || 'u_301';
+      await ensureInitialSeed(userId);
+      const result = await autoCancelEngine.runCheck(userId);
+      res.json({ success: true, result });
+    } catch (err: any) {
+      res.status(500).json({ success: false, error: err.message });
+    }
+  });
+
+  router.put('/automation/subscriptions/:id', async (req: Request, res: Response) => {
+    try {
+      const userId = req.body.userId || 'u_301';
+      const subscriptionId = req.params.id;
+      const currentStatus = await autoCancelEngine.getStatus(userId);
+      const view = currentStatus.subscriptions.find((item) => item.subscription.subscription_id === subscriptionId);
+      if (!view) return res.status(404).json({ success: false, error: 'Subscription not found' });
+
+      const patch = req.body as {
+        enabled?: boolean;
+        nextRenewalDate?: string | null;
+        lastUsedDaysAgo?: number | null;
+      };
+      const state: AutoCancelState = { ...view.state };
+
+      if (typeof patch.enabled === 'boolean') state.enabled = patch.enabled;
+      if (patch.nextRenewalDate !== undefined) {
+        if (patch.nextRenewalDate === null || patch.nextRenewalDate === '') {
+          state.next_renewal_date = undefined;
+          state.renewal_date_source = undefined;
+        } else {
+          const parsed = new Date(patch.nextRenewalDate);
+          if (Number.isNaN(parsed.getTime())) {
+            return res.status(400).json({ success: false, error: 'Invalid nextRenewalDate' });
+          }
+          state.next_renewal_date = parsed.toISOString();
+          state.renewal_date_source = 'manual';
+          state.responded = false;
+          state.response = undefined;
+        }
+      }
+      if (patch.lastUsedDaysAgo !== undefined && patch.lastUsedDaysAgo !== null) {
+        state.manual_last_used_days_ago = Math.max(0, Math.round(Number(patch.lastUsedDaysAgo)));
+        state.last_used_at = new Date(Date.now() - state.manual_last_used_days_ago * 24 * 60 * 60 * 1000).toISOString();
+        state.usage_source = 'manual';
+        state.responded = false;
+        state.response = undefined;
+        state.snoozed_until = undefined;
+      }
+
+      state.updated_at = new Date().toISOString();
+      await db.saveAutoCancelState(userId, state);
+      const result = await autoCancelEngine.runCheck(userId);
+      res.json({ success: true, state, result });
+    } catch (err: any) {
+      res.status(500).json({ success: false, error: err.message });
+    }
+  });
+
+  router.post('/automation/subscriptions/:id/respond', async (req: Request, res: Response) => {
+    try {
+      const userId = req.body.userId || 'u_301';
+      const subscriptionId = req.params.id;
+      const response = String(req.body.response || '');
+      const status = await autoCancelEngine.getStatus(userId);
+      const view = status.subscriptions.find((item) => item.subscription.subscription_id === subscriptionId);
+      if (!view) return res.status(404).json({ success: false, error: 'Subscription not found' });
+
+      const state: AutoCancelState = { ...view.state, updated_at: new Date().toISOString() };
+
+      if (response === 'keep') {
+        state.responded = true;
+        state.response = 'keep';
+        state.status = 'kept_for_cycle';
+        state.snoozed_until = undefined;
+        state.note = 'User chose to keep this subscription for the current renewal cycle.';
+        await db.addAuditEvent(userId, {
+          timestamp: new Date().toISOString(),
+          merchant: view.subscription.merchant,
+          action: 'auto_cancel_keep_response',
+          status: 'completed',
+          reason: 'User responded to renewal reminder and kept the subscription for this cycle.',
+          savings: 0,
+          subscription_id: subscriptionId,
+        });
+      } else if (response === 'snooze') {
+        const hours = Math.max(1, Math.min(168, Number(req.body.hours || 48)));
+        state.responded = false;
+        state.response = 'snooze';
+        state.status = 'snoozed';
+        state.snoozed_until = new Date(Date.now() + hours * 60 * 60 * 1000).toISOString();
+        state.note = `Auto-cancel reminders snoozed for ${hours} hours.`;
+      } else if (response === 'mark_used') {
+        state.responded = false;
+        state.response = 'mark_used';
+        state.status = 'monitoring';
+        state.usage_source = 'manual';
+        state.manual_last_used_days_ago = 0;
+        state.last_used_at = new Date().toISOString();
+        state.snoozed_until = undefined;
+        state.note = 'Usage reset manually. Inactivity countdown restarted today.';
+      } else if (response === 'cancel_now') {
+        const result = await orchestrator.executeUserApprovedAction(userId, subscriptionId, {
+          action: 'cancel',
+          reason: 'User explicitly selected Cancel now from Auto-Cancel Center',
+          requires_approval: false,
+          guardrail_status: 'passed',
+        });
+        state.responded = true;
+        state.response = 'cancel_now';
+        state.status = result.status === 'success' ? 'cancelled' : 'failed';
+        state.last_action_simulated = result.simulated;
+        state.note = result.status === 'success'
+          ? (result.simulated ? 'Cancellation workflow completed in simulation mode.' : 'Cancellation completed.')
+          : 'Cancellation adapter failed.';
+      } else {
+        return res.status(400).json({ success: false, error: 'response must be keep, snooze, mark_used, or cancel_now' });
+      }
+
+      await db.saveAutoCancelState(userId, state);
+      res.json({ success: true, state });
+    } catch (err: any) {
+      res.status(500).json({ success: false, error: err.message, code: err.code });
+    }
+  });
+
+  router.get('/automation/notifications', async (req: Request, res: Response) => {
+    try {
+      const userId = (req.query.userId as string) || 'u_301';
+      const unreadOnly = req.query.unreadOnly === 'true';
+      const notifications = await db.getAutomationNotifications(userId, unreadOnly);
+      res.json({ success: true, notifications });
+    } catch (err: any) {
+      res.status(500).json({ success: false, error: err.message });
+    }
+  });
+
+  router.post('/automation/notifications/:id', async (req: Request, res: Response) => {
+    try {
+      const userId = req.body.userId || 'u_301';
+      await db.markAutomationNotification(userId, Number(req.params.id), {
+        read: req.body.read,
+        delivered: req.body.delivered,
+      });
+      res.json({ success: true });
+    } catch (err: any) {
+      res.status(500).json({ success: false, error: err.message });
+    }
+  });
+
+
+
   // 7. Audit Results & Current State
   router.get('/audit/results', async (req: Request, res: Response) => {
     try {
@@ -819,3 +1035,5 @@ export function createApiRouter(): Router {
 
   return router;
 }
+
+

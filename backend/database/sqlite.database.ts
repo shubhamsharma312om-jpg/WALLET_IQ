@@ -14,6 +14,9 @@ import {
   ActionResult,
   AuditEvent,
   SavingsSummary,
+  AutoCancelSettings,
+  AutoCancelState,
+  AutomationNotification,
 } from '../models/index.ts';
 import { ApprovalRequest, EscalationRecord } from '../block3-engine/action-types.ts';
 import { IDatabase } from './interfaces.ts';
@@ -28,6 +31,16 @@ export class SQLiteDatabase implements IDatabase {
     minimum_confidence: 90,
     duplicate_subscriptions: 'require_approval',
     unused_after_days: 90,
+  };
+
+  public static readonly DEFAULT_AUTO_CANCEL_SETTINGS: AutoCancelSettings = {
+    enabled: false,
+    inactivity_days: 20,
+    first_reminder_days_before: 10,
+    second_reminder_days_before: 5,
+    final_window_hours: 48,
+    auto_cancel_when_ignored: true,
+    desktop_notifications: true,
   };
 
   constructor(dbLocation?: string) {
@@ -139,6 +152,40 @@ export class SQLiteDatabase implements IDatabase {
         resolved_at TEXT,
         status TEXT NOT NULL,
         raw_json TEXT NOT NULL
+      );
+
+
+      CREATE TABLE IF NOT EXISTS auto_cancel_settings (
+        user_id TEXT PRIMARY KEY,
+        enabled INTEGER NOT NULL,
+        inactivity_days INTEGER NOT NULL,
+        first_reminder_days_before INTEGER NOT NULL,
+        second_reminder_days_before INTEGER NOT NULL,
+        final_window_hours INTEGER NOT NULL,
+        auto_cancel_when_ignored INTEGER NOT NULL,
+        desktop_notifications INTEGER NOT NULL
+      );
+
+      CREATE TABLE IF NOT EXISTS auto_cancel_states (
+        user_id TEXT NOT NULL,
+        subscription_id TEXT NOT NULL,
+        raw_json TEXT NOT NULL,
+        updated_at TEXT NOT NULL,
+        PRIMARY KEY (user_id, subscription_id)
+      );
+
+      CREATE TABLE IF NOT EXISTS automation_notifications (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        user_id TEXT NOT NULL,
+        subscription_id TEXT,
+        type TEXT NOT NULL,
+        title TEXT NOT NULL,
+        body TEXT NOT NULL,
+        dedupe_key TEXT NOT NULL,
+        created_at TEXT NOT NULL,
+        read INTEGER NOT NULL DEFAULT 0,
+        delivered INTEGER NOT NULL DEFAULT 0,
+        UNIQUE (user_id, dedupe_key)
       );
 
       CREATE TABLE IF NOT EXISTS escalation_records (
@@ -684,6 +731,149 @@ export class SQLiteDatabase implements IDatabase {
       savings: r.savings,
       subscription_id: r.subscription_id,
     }));
+  }
+
+
+  // ============================================================================
+  // Auto-cancel Automation
+  // ============================================================================
+  public async getAutoCancelSettings(userId: string): Promise<AutoCancelSettings> {
+    const db = this.ensureDb();
+    const row = db.prepare('SELECT * FROM auto_cancel_settings WHERE user_id = ?').get(userId) as
+      | {
+          enabled: number;
+          inactivity_days: number;
+          first_reminder_days_before: number;
+          second_reminder_days_before: number;
+          final_window_hours: number;
+          auto_cancel_when_ignored: number;
+          desktop_notifications: number;
+        }
+      | undefined;
+
+    if (!row) {
+      const defaults = { ...SQLiteDatabase.DEFAULT_AUTO_CANCEL_SETTINGS };
+      await this.saveAutoCancelSettings(userId, defaults);
+      return defaults;
+    }
+
+    return {
+      enabled: row.enabled === 1,
+      inactivity_days: row.inactivity_days,
+      first_reminder_days_before: row.first_reminder_days_before,
+      second_reminder_days_before: row.second_reminder_days_before,
+      final_window_hours: row.final_window_hours === 24 ? 24 : 48,
+      auto_cancel_when_ignored: row.auto_cancel_when_ignored === 1,
+      desktop_notifications: row.desktop_notifications === 1,
+    };
+  }
+
+  public async saveAutoCancelSettings(userId: string, settings: AutoCancelSettings): Promise<void> {
+    const db = this.ensureDb();
+    db.prepare(`
+      INSERT OR REPLACE INTO auto_cancel_settings (
+        user_id, enabled, inactivity_days, first_reminder_days_before,
+        second_reminder_days_before, final_window_hours,
+        auto_cancel_when_ignored, desktop_notifications
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    `).run(
+      userId,
+      settings.enabled ? 1 : 0,
+      Math.max(1, Math.round(settings.inactivity_days)),
+      Math.max(1, Math.round(settings.first_reminder_days_before)),
+      Math.max(1, Math.round(settings.second_reminder_days_before)),
+      settings.final_window_hours === 24 ? 24 : 48,
+      settings.auto_cancel_when_ignored ? 1 : 0,
+      settings.desktop_notifications ? 1 : 0
+    );
+  }
+
+  public async getAutoCancelStates(userId: string): Promise<AutoCancelState[]> {
+    const db = this.ensureDb();
+    const rows = db.prepare('SELECT raw_json FROM auto_cancel_states WHERE user_id = ? ORDER BY updated_at DESC').all(userId) as Array<{ raw_json: string }>;
+    return rows.map((r) => JSON.parse(r.raw_json) as AutoCancelState);
+  }
+
+  public async getAutoCancelState(userId: string, subscriptionId: string): Promise<AutoCancelState | null> {
+    const db = this.ensureDb();
+    const row = db.prepare('SELECT raw_json FROM auto_cancel_states WHERE user_id = ? AND subscription_id = ?').get(userId, subscriptionId) as { raw_json: string } | undefined;
+    return row ? (JSON.parse(row.raw_json) as AutoCancelState) : null;
+  }
+
+  public async saveAutoCancelState(userId: string, state: AutoCancelState): Promise<void> {
+    const db = this.ensureDb();
+    const updated = { ...state, user_id: userId, updated_at: state.updated_at || new Date().toISOString() };
+    db.prepare(`
+      INSERT OR REPLACE INTO auto_cancel_states (user_id, subscription_id, raw_json, updated_at)
+      VALUES (?, ?, ?, ?)
+    `).run(userId, state.subscription_id, JSON.stringify(updated), updated.updated_at);
+  }
+
+  public async addAutomationNotification(userId: string, notification: AutomationNotification): Promise<boolean> {
+    const db = this.ensureDb();
+    const result = db.prepare(`
+      INSERT OR IGNORE INTO automation_notifications (
+        user_id, subscription_id, type, title, body, dedupe_key, created_at, read, delivered
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `).run(
+      userId,
+      notification.subscription_id || null,
+      notification.type,
+      notification.title,
+      notification.body,
+      notification.dedupe_key,
+      notification.created_at || new Date().toISOString(),
+      notification.read ? 1 : 0,
+      notification.delivered ? 1 : 0
+    );
+    return Number(result.changes) > 0;
+  }
+
+  public async getAutomationNotifications(userId: string, unreadOnly = false): Promise<AutomationNotification[]> {
+    const db = this.ensureDb();
+    const sql = unreadOnly
+      ? 'SELECT * FROM automation_notifications WHERE user_id = ? AND read = 0 ORDER BY id DESC LIMIT 100'
+      : 'SELECT * FROM automation_notifications WHERE user_id = ? ORDER BY id DESC LIMIT 100';
+    const rows = db.prepare(sql).all(userId) as Array<{
+      id: number;
+      user_id: string;
+      subscription_id: string | null;
+      type: AutomationNotification['type'];
+      title: string;
+      body: string;
+      dedupe_key: string;
+      created_at: string;
+      read: number;
+      delivered: number;
+    }>;
+    return rows.map((r) => ({
+      id: r.id,
+      user_id: r.user_id,
+      subscription_id: r.subscription_id || undefined,
+      type: r.type,
+      title: r.title,
+      body: r.body,
+      dedupe_key: r.dedupe_key,
+      created_at: r.created_at,
+      read: r.read === 1,
+      delivered: r.delivered === 1,
+    }));
+  }
+
+  public async markAutomationNotification(
+    userId: string,
+    id: number,
+    updates: { read?: boolean; delivered?: boolean }
+  ): Promise<void> {
+    const db = this.ensureDb();
+    const existing = db.prepare('SELECT read, delivered FROM automation_notifications WHERE user_id = ? AND id = ?').get(userId, id) as { read: number; delivered: number } | undefined;
+    if (!existing) return;
+    db.prepare('UPDATE automation_notifications SET read = ?, delivered = ? WHERE user_id = ? AND id = ?').run(
+      updates.read === undefined ? existing.read : updates.read ? 1 : 0,
+      updates.delivered === undefined ? existing.delivered : updates.delivered ? 1 : 0,
+      userId,
+      id
+    );
   }
 
   // ============================================================================

@@ -91,6 +91,13 @@ export interface Subscription {
   source_transaction_ids?: string[];
   source_email_ids?: string[];
   awaiting_decision?: boolean;
+
+  // Renewal / inactivity automation metadata
+  next_renewal_date?: string; // ISO 8601 date/time when the next charge is expected
+  renewal_date_source?: 'email' | 'cadence_estimate' | 'manual' | 'demo';
+  usage_signal_available?: boolean; // Gmail alone cannot prove product usage
+  usage_source?: 'external' | 'manual' | 'unknown' | 'demo';
+  last_used_at?: string; // ISO 8601 when a reliable usage signal is available
 }
 
 // ============================================================================
@@ -292,3 +299,91 @@ export interface AuditRunResult {
 export * from '../block3-engine/action-types.ts';
 
 
+
+// ============================================================================
+// 8. Auto-Cancel Automation Models
+// ============================================================================
+export interface AutoCancelSettings {
+  user_id?: string;
+  enabled: boolean;
+  inactivity_days: number;
+  first_reminder_days_before: number;
+  second_reminder_days_before: number;
+  final_window_hours: 24 | 48;
+  auto_cancel_when_ignored: boolean;
+  desktop_notifications: boolean;
+}
+
+export type AutoCancelStatus =
+  | 'monitoring'
+  | 'needs_renewal_date'
+  | 'usage_unknown'
+  | 'reminding'
+  | 'scheduled'
+  | 'kept_for_cycle'
+  | 'snoozed'
+  | 'cancelled'
+  | 'blocked'
+  | 'failed';
+
+export interface AutoCancelState {
+  user_id?: string;
+  subscription_id: string;
+  enabled: boolean;
+  next_renewal_date?: string;
+  renewal_date_source?: Subscription['renewal_date_source'];
+  last_used_at?: string;
+  manual_last_used_days_ago?: number;
+  usage_source: 'subscription_signal' | 'manual' | 'unknown';
+  status: AutoCancelStatus;
+  responded: boolean;
+  response?: 'keep' | 'snooze' | 'cancel_now' | 'mark_used';
+  snoozed_until?: string;
+  cycle_key?: string;
+  last_reminder_stage?: string;
+  last_checked_at?: string;
+  last_action_simulated?: boolean;
+  note?: string;
+  updated_at: string;
+}
+
+export type AutomationNotificationType =
+  | 'reminder'
+  | 'final_warning'
+  | 'auto_cancelled'
+  | 'auto_cancel_failed'
+  | 'blocked'
+  | 'info';
+
+export interface AutomationNotification {
+  id?: number;
+  user_id?: string;
+  subscription_id?: string;
+  type: AutomationNotificationType;
+  title: string;
+  body: string;
+  dedupe_key: string;
+  created_at: string;
+  read: boolean;
+  delivered: boolean;
+}
+
+export interface AutoCancelSubscriptionView {
+  subscription: Subscription;
+  state: AutoCancelState;
+  inactive_days: number | null;
+  days_until_renewal: number | null;
+  hours_until_renewal: number | null;
+  eligible_for_auto_cancel: boolean;
+  guardrail_reason?: string;
+}
+
+export interface AutoCancelCheckResult {
+  checked_at: string;
+  user_id: string;
+  evaluated: number;
+  reminders_created: number;
+  actions_triggered: number;
+  blocked: number;
+  subscriptions: AutoCancelSubscriptionView[];
+}
