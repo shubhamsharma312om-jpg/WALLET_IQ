@@ -1,0 +1,24 @@
+{
+  "module": "BLOCK_1_DETECTION",
+  "endpoint": "/analyze-subscriptions",
+  "method": "POST",
+  "expectedPort": 4001,
+  "requestSchema": {
+    "type": "object",
+    "required": ["user_id", "transactions", "emails"],
+    "properties": {
+      "user_id": { "type": "string" },
+      "transactions": { "type": "array" },
+      "emails": { "type": "array" }
+    }
+  },
+  "responseSchema": {
+    "type": "object",
+    "required": ["user_id", "subscriptions", "events"],
+    "properties": {
+      "user_id": { "type": "string" },
+      "subscriptions": { "type": "array" },
+      "events": { "type": "array" }
+    }
+  }
+}

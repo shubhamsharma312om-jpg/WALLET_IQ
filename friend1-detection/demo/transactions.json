@@ -1,0 +1,90 @@
+[
+  {
+    "transaction_id": "tx_streamflix_01",
+    "user_id": "u_301",
+    "merchant": "StreamFlix",
+    "amount": 14.99,
+    "currency": "USD",
+    "date": "2026-09-01T08:00:00Z",
+    "category": "streaming_video",
+    "payment_method": "Visa ...4242",
+    "description": "StreamFlix Standard Subscription"
+  },
+  {
+    "transaction_id": "tx_streamflix_02",
+    "user_id": "u_301",
+    "merchant": "StreamFlix",
+    "amount": 14.99,
+    "currency": "USD",
+    "date": "2026-08-01T08:00:00Z",
+    "category": "streaming_video",
+    "payment_method": "Visa ...4242",
+    "description": "StreamFlix Standard Subscription"
+  },
+  {
+    "transaction_id": "tx_tunewave_01",
+    "user_id": "u_301",
+    "merchant": "TuneWave",
+    "amount": 9.99,
+    "currency": "USD",
+    "date": "2026-09-14T10:15:00Z",
+    "category": "streaming_music",
+    "payment_method": "Apple Pay",
+    "description": "TuneWave Individual Music Plan"
+  },
+  {
+    "transaction_id": "tx_musicbox_01",
+    "user_id": "u_301",
+    "merchant": "MusicBox Premium",
+    "amount": 11.99,
+    "currency": "USD",
+    "date": "2026-09-08T12:00:00Z",
+    "category": "streaming_music",
+    "payment_method": "Mastercard ...9911",
+    "description": "MusicBox Premium Hi-Fi Tier"
+  },
+  {
+    "transaction_id": "tx_healthguard_01",
+    "user_id": "u_301",
+    "merchant": "HealthGuard Insurance",
+    "amount": 89.00,
+    "currency": "USD",
+    "date": "2026-09-05T06:30:00Z",
+    "category": "insurance",
+    "payment_method": "Direct Debit ACH",
+    "description": "HealthGuard Supplemental Dental & Vision Policy"
+  },
+  {
+    "transaction_id": "tx_cloudpro_01",
+    "user_id": "u_301",
+    "merchant": "CloudPro",
+    "amount": 19.99,
+    "currency": "USD",
+    "date": "2026-09-10T14:20:00Z",
+    "category": "cloud_storage",
+    "payment_method": "Visa ...4242",
+    "description": "CloudPro 2TB Secure Cloud Storage (Rate Increase applied)"
+  },
+  {
+    "transaction_id": "tx_cloudpro_old",
+    "user_id": "u_301",
+    "merchant": "CloudPro",
+    "amount": 14.99,
+    "currency": "USD",
+    "date": "2026-08-10T14:20:00Z",
+    "category": "cloud_storage",
+    "payment_method": "Visa ...4242",
+    "description": "CloudPro 2TB Secure Cloud Storage (Prior Rate)"
+  },
+  {
+    "transaction_id": "tx_fitpulse_01",
+    "user_id": "u_301",
+    "merchant": "FitPulse Pro",
+    "amount": 29.99,
+    "currency": "USD",
+    "date": "2026-09-12T09:00:00Z",
+    "category": "fitness",
+    "payment_method": "Apple Pay",
+    "description": "FitPulse Pro (Free trial converted to monthly recurring charge)"
+  }
+]

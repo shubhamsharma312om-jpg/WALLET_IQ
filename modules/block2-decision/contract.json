@@ -1,0 +1,24 @@
+{
+  "module": "BLOCK_2_DECISION_SCORING",
+  "endpoint": "/evaluate-subscriptions",
+  "method": "POST",
+  "expectedPort": 4002,
+  "requestSchema": {
+    "type": "object",
+    "required": ["user_id", "subscriptions", "events", "guardrails"],
+    "properties": {
+      "user_id": { "type": "string" },
+      "subscriptions": { "type": "array" },
+      "events": { "type": "array" },
+      "guardrails": { "type": "object" }
+    }
+  },
+  "responseSchema": {
+    "type": "object",
+    "required": ["user_id", "decisions"],
+    "properties": {
+      "user_id": { "type": "string" },
+      "decisions": { "type": "array" }
+    }
+  }
+}

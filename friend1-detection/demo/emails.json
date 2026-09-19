@@ -1,0 +1,43 @@
+[
+  {
+    "event_id": "email_cloudpro_increase",
+    "user_id": "u_301",
+    "subject": "Important update regarding your CloudPro subscription pricing",
+    "sender": "billing@cloudpro.io",
+    "date": "2026-08-25T11:00:00Z",
+    "snippet": "Effective September 1st, your monthly CloudPro storage plan rate will increase from $14.99 to $19.99/month.",
+    "event_type": "price_increase",
+    "metadata": {
+      "old_amount": 14.99,
+      "new_amount": 19.99,
+      "merchant": "CloudPro"
+    }
+  },
+  {
+    "event_id": "email_fitpulse_conversion",
+    "user_id": "u_301",
+    "subject": "Your 14-day free trial has concluded: Welcome to FitPulse Pro Monthly",
+    "sender": "receipts@fitpulse.app",
+    "date": "2026-09-12T09:00:00Z",
+    "snippet": "Your free trial has ended. We have billed $29.99 to your default payment method for your first monthly membership cycle.",
+    "event_type": "trial_ending",
+    "metadata": {
+      "trial_converted": true,
+      "amount": 29.99,
+      "merchant": "FitPulse Pro"
+    }
+  },
+  {
+    "event_id": "email_streamflix_inactive",
+    "user_id": "u_301",
+    "subject": "We miss you on StreamFlix — see what new titles arrived this month",
+    "sender": "recommendations@streamflix.com",
+    "date": "2026-08-15T18:30:00Z",
+    "snippet": "It has been over 5 months since your profile last streamed a show. Check out what is trending today!",
+    "event_type": "renewal_notice",
+    "metadata": {
+      "inactive_hint_days": 187,
+      "merchant": "StreamFlix"
+    }
+  }
+]

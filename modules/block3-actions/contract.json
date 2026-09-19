@@ -1,0 +1,25 @@
+{
+  "module": "BLOCK_3_AUTONOMOUS_ACTIONS",
+  "endpoint": "/execute-action",
+  "method": "POST",
+  "expectedPort": 4003,
+  "requestSchema": {
+    "type": "object",
+    "required": ["user_id", "subscription", "decision"],
+    "properties": {
+      "user_id": { "type": "string" },
+      "subscription": { "type": "object" },
+      "decision": { "type": "object" }
+    }
+  },
+  "responseSchema": {
+    "type": "object",
+    "required": ["action_id", "status", "action", "monthly_savings"],
+    "properties": {
+      "action_id": { "type": "string" },
+      "status": { "type": "string", "enum": ["success", "failed", "pending", "escalated"] },
+      "action": { "type": "string" },
+      "monthly_savings": { "type": "number" }
+    }
+  }
+}

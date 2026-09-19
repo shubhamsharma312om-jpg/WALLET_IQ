@@ -1,0 +1,10 @@
+{
+  "auto_action_limit": 20,
+  "protected_categories": [
+    "insurance",
+    "loan_payment"
+  ],
+  "minimum_confidence": 90,
+  "duplicate_subscriptions": "require_approval",
+  "unused_after_days": 90
+}

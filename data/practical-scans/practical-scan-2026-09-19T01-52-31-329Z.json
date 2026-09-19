@@ -1,0 +1,3416 @@
+{
+  "source": "gmail",
+  "scanStatus": "success",
+  "scannedAt": "2026-09-19T01:52:14.736Z",
+  "emailsScanned": 200,
+  "relevantEmails": 116,
+  "subscriptionsDetected": 116,
+  "emails": [
+    {
+      "event_id": "gmail_1a0b74c00a713a09_0",
+      "user_id": "u_301",
+      "subject": "Your Spotify Premium subscription has been renewed",
+      "sender": "Zooom Z <zoompg8@gmail.com>",
+      "date": "2026-09-19T01:33:13.000Z",
+      "snippet": "From/Content: Spotify. Amount: INR 119. Cadence: monthly. Type: renewal_notice. Subject: Your Spotify Premium subscription has been renewed",
+      "event_type": "renewal_notice",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0b74c00a713a09",
+        "merchant": "Spotify",
+        "amount": 119,
+        "currency": "INR",
+        "cadence": "monthly",
+        "confidence": 100
+      }
+    },
+    {
+      "event_id": "gmail_1a0b601d7c157557_1",
+      "user_id": "u_301",
+      "subject": "🏆 The #1 OLED Gaming Monitor Brand Has Arrived",
+      "sender": "ASUS India <noreply@nedm.asus.com>",
+      "date": "2026-09-18T19:32:43.000Z",
+      "snippet": "From/Content: ASUS India. Subject: 🏆 The #1 OLED Gaming Monitor Brand Has Arrived",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0b601d7c157557",
+        "merchant": "ASUS India",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a0b5baba7057b00_2",
+      "user_id": "u_301",
+      "subject": "Get back to growth with 50% off",
+      "sender": "Codecademy <learn@itr.mail.codecademy.com>",
+      "date": "2026-09-18T18:15:06.000Z",
+      "snippet": "From/Content: Codecademy. Subject: Get back to growth with 50% off",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0b5baba7057b00",
+        "merchant": "Codecademy",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a0af87add1fe5e5_3",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "Sree Keerthana <invitations@linkedin.com>",
+      "date": "2026-09-17T13:21:38.000Z",
+      "snippet": "From/Content: Sree Keerthana. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0af87add1fe5e5",
+        "merchant": "Sree Keerthana",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a0af4e0f5d0566f_4",
+      "user_id": "u_301",
+      "subject": "10,000+ global courses just went flat-rate!",
+      "sender": "Ananya Bhatt <noreply@unstop.news>",
+      "date": "2026-09-17T12:18:43.000Z",
+      "snippet": "From/Content: Ananya Bhatt. Subject: 10,000+ global courses just went flat-rate!",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0af4e0f5d0566f",
+        "merchant": "Ananya Bhatt",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a0af18ebad47efc_5",
+      "user_id": "u_301",
+      "subject": "Upgrade Your Workflow — ASUS NUC 15 Pro Kit Now",
+      "sender": "ASUS India <noreply@nedm.asus.com>",
+      "date": "2026-09-17T11:20:36.000Z",
+      "snippet": "From/Content: ASUS India. Subject: Upgrade Your Workflow — ASUS NUC 15 Pro Kit Now",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0af18ebad47efc",
+        "merchant": "ASUS India",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a0ae3e1c9b957b6_6",
+      "user_id": "u_301",
+      "subject": "28 people viewed your profile",
+      "sender": "LinkedIn <messages-noreply@linkedin.com>",
+      "date": "2026-09-17T07:21:41.000Z",
+      "snippet": "From/Content: LinkedIn. Subject: 28 people viewed your profile",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0ae3e1c9b957b6",
+        "merchant": "LinkedIn",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a0ad3c6d5230407_7",
+      "user_id": "u_301",
+      "subject": "Looking for a skill-savvy career companion?",
+      "sender": "Udemy <hello@students.udemy.com>",
+      "date": "2026-09-17T02:40:11.000Z",
+      "snippet": "From/Content: Udemy. Subject: Looking for a skill-savvy career companion?",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0ad3c6d5230407",
+        "merchant": "Udemy",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a0ad35c45eae7ba_8",
+      "user_id": "u_301",
+      "subject": "🎓 Ends soon: Get Coursera Plus for ₹7,499/year",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-09-17T02:32:56.000Z",
+      "snippet": "From/Content: Coursera. Amount: INR 7.49. Subject: 🎓 Ends soon: Get Coursera Plus for ₹7,499/year",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0ad35c45eae7ba",
+        "merchant": "Coursera",
+        "amount": 7.49,
+        "currency": "INR",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a0aab3ff10ab411_9",
+      "user_id": "u_301",
+      "subject": "Your order#260916857A59711494 on https://icici.myclassboard.com is successful.",
+      "sender": "orders@ccavenue.com",
+      "date": "2026-09-16T14:51:48.000Z",
+      "snippet": "From/Content: Ccavenue. Subject: Your order#260916857A59711494 on https://icici.myclassboard.com is successful.",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0aab3ff10ab411",
+        "merchant": "Ccavenue",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a0aab3f4ce10aee_10",
+      "user_id": "u_301",
+      "subject": "Fee Payment Received - KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY",
+      "sender": "KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY <MVA@myclassboard.in>",
+      "date": "2026-09-16T14:51:55.000Z",
+      "snippet": "From/Content: KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY. Type: receipt. Subject: Fee Payment Received - KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY",
+      "event_type": "receipt",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0aab3f4ce10aee",
+        "merchant": "KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY",
+        "confidence": 75
+      }
+    },
+    {
+      "event_id": "gmail_1a0aa710586ad4db_11",
+      "user_id": "u_301",
+      "subject": "Want to handle social media for Gul Panag’s Company?",
+      "sender": "Team Unstop <noreply@unstop.news>",
+      "date": "2026-09-16T13:38:48.000Z",
+      "snippet": "From/Content: Team Unstop. Subject: Want to handle social media for Gul Panag’s Company?",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0aa710586ad4db",
+        "merchant": "Team Unstop",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a0aa4325d98de3e_12",
+      "user_id": "u_301",
+      "subject": "⚡Discover the Performance Hidden in Your ASUS & ROG Laptop",
+      "sender": "ASUS India <noreply@nedm.asus.com>",
+      "date": "2026-09-16T12:48:37.000Z",
+      "snippet": "From/Content: ASUS India. Subject: ⚡Discover the Performance Hidden in Your ASUS & ROG Laptop",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0aa4325d98de3e",
+        "merchant": "ASUS India",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a0a985a7adc5515_13",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "Manikandan Selvaraj <invitations@linkedin.com>",
+      "date": "2026-09-16T09:21:43.000Z",
+      "snippet": "From/Content: Manikandan Selvaraj. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0a985a7adc5515",
+        "merchant": "Manikandan Selvaraj",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a0a8a9ea29926fc_14",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "Gargi Aseri <invitations@linkedin.com>",
+      "date": "2026-09-16T05:21:42.000Z",
+      "snippet": "From/Content: Gargi Aseri. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0a8a9ea29926fc",
+        "merchant": "Gargi Aseri",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a0a0f0624065d85_15",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "GANESH SUTHOJU <invitations@linkedin.com>",
+      "date": "2026-09-14T17:21:42.000Z",
+      "snippet": "From/Content: GANESH SUTHOJU. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0a0f0624065d85",
+        "merchant": "GANESH SUTHOJU",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a09fbbaf5439142_16",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "Aviral Rawat <invitations@linkedin.com>",
+      "date": "2026-09-14T11:44:32.000Z",
+      "snippet": "From/Content: Aviral Rawat. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a09fbbaf5439142",
+        "merchant": "Aviral Rawat",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a09f38fb952a78d_17",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "Shreya Chowdary Chennupati <invitations@linkedin.com>",
+      "date": "2026-09-14T09:21:46.000Z",
+      "snippet": "From/Content: Shreya Chowdary Chennupati. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a09f38fb952a78d",
+        "merchant": "Shreya Chowdary Chennupati",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a09dea01c1455f5_18",
+      "user_id": "u_301",
+      "subject": "A full year of career growth: Save with a Udemy Personal Plan annual subscription",
+      "sender": "Udemy <hello@students.udemy.com>",
+      "date": "2026-09-14T03:15:51.000Z",
+      "snippet": "From/Content: Udemy. Cadence: yearly. Subject: A full year of career growth: Save with a Udemy Personal Plan annual subscription",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a09dea01c1455f5",
+        "merchant": "Udemy",
+        "cadence": "yearly",
+        "confidence": 70
+      }
+    },
+    {
+      "event_id": "gmail_1a0971181b2e4ac9_19",
+      "user_id": "u_301",
+      "subject": "28 people viewed your profile",
+      "sender": "LinkedIn <messages-noreply@linkedin.com>",
+      "date": "2026-09-12T19:21:41.000Z",
+      "snippet": "From/Content: LinkedIn. Subject: 28 people viewed your profile",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0971181b2e4ac9",
+        "merchant": "LinkedIn",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a096a3a6e97030a_20",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "TAQI HUSSAIN <invitations@linkedin.com>",
+      "date": "2026-09-12T17:21:42.000Z",
+      "snippet": "From/Content: TAQI HUSSAIN. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a096a3a6e97030a",
+        "merchant": "TAQI HUSSAIN",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a0964ae6abd8ad6_21",
+      "user_id": "u_301",
+      "subject": "🫣 Time's almost up — ₹7,499/year for Coursera Plus",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-09-12T15:44:46.000Z",
+      "snippet": "From/Content: Coursera. Amount: INR 7.49. Subject: 🫣 Time's almost up — ₹7,499/year for Coursera Plus",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0964ae6abd8ad6",
+        "merchant": "Coursera",
+        "amount": 7.49,
+        "currency": "INR",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a093a29fb5cde6b_22",
+      "user_id": "u_301",
+      "subject": "24 people viewed your profile",
+      "sender": "LinkedIn <messages-noreply@linkedin.com>",
+      "date": "2026-09-12T03:21:42.000Z",
+      "snippet": "From/Content: LinkedIn. Subject: 24 people viewed your profile",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a093a29fb5cde6b",
+        "merchant": "LinkedIn",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a09216a9051fa96_23",
+      "user_id": "u_301",
+      "subject": "⚡️ Save 40% on three months of Coursera Plus ",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-09-11T20:09:12.000Z",
+      "snippet": "From/Content: Coursera. Amount: USD 35.4. Subject: ⚡️ Save 40% on three months of Coursera Plus ",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a09216a9051fa96",
+        "merchant": "Coursera",
+        "amount": 35.4,
+        "currency": "USD",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a090c6afab614f6_24",
+      "user_id": "u_301",
+      "subject": "September newsletter: A fresh season for learning",
+      "sender": "Codecademy <learn@itr.mail.codecademy.com>",
+      "date": "2026-09-11T14:02:10.000Z",
+      "snippet": "From/Content: Codecademy. Subject: September newsletter: A fresh season for learning",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a090c6afab614f6",
+        "merchant": "Codecademy",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a08ed92dfcf6d02_25",
+      "user_id": "u_301",
+      "subject": "Fix this common reviewer comment before you submit",
+      "sender": "Nolita from Paperpal <hello@info.paperpal.com>",
+      "date": "2026-09-11T05:03:11.000Z",
+      "snippet": "From/Content: Nolita from Paperpal. Subject: Fix this common reviewer comment before you submit",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a08ed92dfcf6d02",
+        "merchant": "Nolita from Paperpal",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a08be90cb52aeae_26",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "Rama reddy <invitations@linkedin.com>",
+      "date": "2026-09-10T15:21:41.000Z",
+      "snippet": "From/Content: Rama reddy. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a08be90cb52aeae",
+        "merchant": "Rama reddy",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a08929eb3c6d59a_27",
+      "user_id": "u_301",
+      "subject": "🚨 Now ₹7,499/year: Don’t miss this Coursera offer",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-09-10T02:33:40.000Z",
+      "snippet": "From/Content: Coursera. Amount: INR 7.49. Subject: 🚨 Now ₹7,499/year: Don’t miss this Coursera offer",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a08929eb3c6d59a",
+        "merchant": "Coursera",
+        "amount": 7.49,
+        "currency": "INR",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a087c9dc67d1bf2_28",
+      "user_id": "u_301",
+      "subject": "Enroll today: IBM AI Engineering with IBM",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-09-09T20:09:07.000Z",
+      "snippet": "From/Content: Coursera. Subject: Enroll today: IBM AI Engineering with IBM",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a087c9dc67d1bf2",
+        "merchant": "Coursera",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a086c2b460bec5e_29",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "Abhishek Kumar <invitations@linkedin.com>",
+      "date": "2026-09-09T15:21:42.000Z",
+      "snippet": "From/Content: Abhishek Kumar. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a086c2b460bec5e",
+        "merchant": "Abhishek Kumar",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a08654d5c031d7e_30",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "Pallavi Pabbathi <invitations@linkedin.com>",
+      "date": "2026-09-09T13:21:41.000Z",
+      "snippet": "From/Content: Pallavi Pabbathi. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a08654d5c031d7e",
+        "merchant": "Pallavi Pabbathi",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a0816744ee2abd7_31",
+      "user_id": "u_301",
+      "subject": "Here’s 50% off to get back to growth",
+      "sender": "Codecademy <learn@itr.mail.codecademy.com>",
+      "date": "2026-09-08T14:23:41.000Z",
+      "snippet": "From/Content: Codecademy. Cadence: yearly. Subject: Here’s 50% off to get back to growth",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0816744ee2abd7",
+        "merchant": "Codecademy",
+        "cadence": "yearly",
+        "confidence": 70
+      }
+    },
+    {
+      "event_id": "gmail_1a07d7cea927d4d9_32",
+      "user_id": "u_301",
+      "subject": "Still open: IBM AI Engineering from IBM",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-09-07T20:08:52.000Z",
+      "snippet": "From/Content: Coursera. Subject: Still open: IBM AI Engineering from IBM",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a07d7cea927d4d9",
+        "merchant": "Coursera",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a07ce3d00c84e89_33",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "Shiva Bandi <invitations@linkedin.com>",
+      "date": "2026-09-07T17:21:40.000Z",
+      "snippet": "From/Content: Shiva Bandi. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a07ce3d00c84e89",
+        "merchant": "Shiva Bandi",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a07bd7f05e80397_34",
+      "user_id": "u_301",
+      "subject": "First-year at college? This scholarship could cover up to INR 2,00,000 of it",
+      "sender": "Buddy4Study <mailer@b4sletter.in>",
+      "date": "2026-09-07T12:29:03.000Z",
+      "snippet": "From/Content: Buddy4Study. Amount: INR 2. Cadence: yearly. Subject: First-year at college? This scholarship could cover up to INR 2,00,000 of it",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a07bd7f05e80397",
+        "merchant": "Buddy4Study",
+        "amount": 2,
+        "currency": "INR",
+        "cadence": "yearly",
+        "confidence": 90
+      }
+    },
+    {
+      "event_id": "gmail_1a07abe82cc24693_35",
+      "user_id": "u_301",
+      "subject": "21 people viewed your profile",
+      "sender": "LinkedIn <messages-noreply@linkedin.com>",
+      "date": "2026-09-07T07:21:40.000Z",
+      "snippet": "From/Content: LinkedIn. Subject: 21 people viewed your profile",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a07abe82cc24693",
+        "merchant": "LinkedIn",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a0782b5282262df_36",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "Ishanth Chetpally <invitations@linkedin.com>",
+      "date": "2026-09-06T19:21:40.000Z",
+      "snippet": "From/Content: Ishanth Chetpally. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0782b5282262df",
+        "merchant": "Ishanth Chetpally",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a077bd7b099629c_37",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "ABINASH KANKANALA <invitations@linkedin.com>",
+      "date": "2026-09-06T17:21:41.000Z",
+      "snippet": "From/Content: ABINASH KANKANALA. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a077bd7b099629c",
+        "merchant": "ABINASH KANKANALA",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a0752b52407a88e_38",
+      "user_id": "u_301",
+      "subject": "Start using your free AI features today",
+      "sender": "Zoom <billing@zoom.us>",
+      "date": "2026-09-06T05:22:47.000Z",
+      "snippet": "From/Content: Zoom. Subject: Start using your free AI features today",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0752b52407a88e",
+        "merchant": "Zoom",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a074e88dee20e7f_39",
+      "user_id": "u_301",
+      "subject": "Coursera Plus ₹7,499/year: Short courses, standout skills",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-09-06T04:09:52.000Z",
+      "snippet": "From/Content: Coursera. Amount: INR 7.49. Subject: Coursera Plus ₹7,499/year: Short courses, standout skills",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a074e88dee20e7f",
+        "merchant": "Coursera",
+        "amount": 7.49,
+        "currency": "INR",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a0707fcd71b38f8_40",
+      "user_id": "u_301",
+      "subject": "Your action is needed",
+      "sender": "McAfee <mcafee@email.mcafee.com>",
+      "date": "2026-09-05T07:36:57.000Z",
+      "snippet": "From/Content: McAfee. Subject: Your action is needed",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0707fcd71b38f8",
+        "merchant": "McAfee",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a07071d04f146bd_41",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "REBBA SAI PAVAN <invitations@linkedin.com>",
+      "date": "2026-09-05T07:21:41.000Z",
+      "snippet": "From/Content: REBBA SAI PAVAN. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a07071d04f146bd",
+        "merchant": "REBBA SAI PAVAN",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a06db4b7f84315e_42",
+      "user_id": "u_301",
+      "subject": "Your team, one Runway workspace",
+      "sender": "Runway <no-reply@comms.runwayml.com>",
+      "date": "2026-09-04T18:35:54.000Z",
+      "snippet": "From/Content: Runway. Amount: USD 69. Subject: Your team, one Runway workspace",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a06db4b7f84315e",
+        "merchant": "Runway",
+        "amount": 69,
+        "currency": "USD",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a06da2c822a552f_43",
+      "user_id": "u_301",
+      "subject": "🔥 School or College Tough? Get a Laptop That's TUF Enough",
+      "sender": "ASUS India <noreply@nedm.asus.com>",
+      "date": "2026-09-04T18:16:14.000Z",
+      "snippet": "From/Content: ASUS India. Subject: 🔥 School or College Tough? Get a Laptop That's TUF Enough",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a06da2c822a552f",
+        "merchant": "ASUS India",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a06bb94db92b37e_44",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "Mohit Peddamatham <invitations@linkedin.com>",
+      "date": "2026-09-04T09:21:40.000Z",
+      "snippet": "From/Content: Mohit Peddamatham. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a06bb94db92b37e",
+        "merchant": "Mohit Peddamatham",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a06a9d5c01390c0_45",
+      "user_id": "u_301",
+      "subject": "🚀 ₹7,499/year: Build new skills with short courses",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-09-04T04:11:32.000Z",
+      "snippet": "From/Content: Coursera. Amount: INR 7.49. Subject: 🚀 ₹7,499/year: Build new skills with short courses",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a06a9d5c01390c0",
+        "merchant": "Coursera",
+        "amount": 7.49,
+        "currency": "INR",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a067e9572a22575_46",
+      "user_id": "u_301",
+      "subject": "Shubham, thanks for being a valued member",
+      "sender": "LinkedIn Premium <linkedin@em.linkedin.com>",
+      "date": "2026-09-03T15:35:39.000Z",
+      "snippet": "From/Content: LinkedIn Premium. Type: trial_ending. Subject: Shubham, thanks for being a valued member",
+      "event_type": "trial_ending",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a067e9572a22575",
+        "merchant": "LinkedIn Premium",
+        "confidence": 75
+      }
+    },
+    {
+      "event_id": "gmail_1a06692eed2763f9_47",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "Pranathi A <invitations@linkedin.com>",
+      "date": "2026-09-03T09:21:40.000Z",
+      "snippet": "From/Content: Pranathi A. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a06692eed2763f9",
+        "merchant": "Pranathi A",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a06630810909bf6_48",
+      "user_id": "u_301",
+      "subject": "Action required!",
+      "sender": "McAfee <mcafee@email.mcafee.com>",
+      "date": "2026-09-03T07:34:09.000Z",
+      "snippet": "From/Content: McAfee. Subject: Action required!",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a06630810909bf6",
+        "merchant": "McAfee",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a064b6f0d32fce0_49",
+      "user_id": "u_301",
+      "subject": "🔥 Upgrade What Matters — Win a Custom PC & More!",
+      "sender": "ASUS India <noreply@nedm.asus.com>",
+      "date": "2026-09-03T00:41:41.000Z",
+      "snippet": "From/Content: ASUS India. Amount: USD 15. Subject: 🔥 Upgrade What Matters — Win a Custom PC & More!",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a064b6f0d32fce0",
+        "merchant": "ASUS India",
+        "amount": 15,
+        "currency": "USD",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a0632402f574881_50",
+      "user_id": "u_301",
+      "subject": "19 people viewed your profile",
+      "sender": "LinkedIn <messages-noreply@linkedin.com>",
+      "date": "2026-09-02T17:21:39.000Z",
+      "snippet": "From/Content: LinkedIn. Subject: 19 people viewed your profile",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0632402f574881",
+        "merchant": "LinkedIn",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a0611030485d744_51",
+      "user_id": "u_301",
+      "subject": "You're still unprotected and exposed to online threats",
+      "sender": "McAfee <mcafee@email.mcafee.com>",
+      "date": "2026-09-02T07:40:45.000Z",
+      "snippet": "From/Content: McAfee. Subject: You're still unprotected and exposed to online threats",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0611030485d744",
+        "merchant": "McAfee",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a05ebd72a4369d4_52",
+      "user_id": "u_301",
+      "subject": "Updates to Google Play Terms of Service",
+      "sender": "Google Play <googleplay-noreply@google.com>",
+      "date": "2026-09-01T20:51:09.000Z",
+      "snippet": "From/Content: Google Play. Subject: Updates to Google Play Terms of Service",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a05ebd72a4369d4",
+        "merchant": "Google Play",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a05e6b88155885c_53",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "Yasvantt P <invitations@linkedin.com>",
+      "date": "2026-09-01T19:21:40.000Z",
+      "snippet": "From/Content: Yasvantt P. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a05e6b88155885c",
+        "merchant": "Yasvantt P",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a05be5517a83f5b_54",
+      "user_id": "u_301",
+      "subject": "New viruses could cost you big time!",
+      "sender": "McAfee <mcafee@email.mcafee.com>",
+      "date": "2026-09-01T07:35:49.000Z",
+      "snippet": "From/Content: McAfee. Subject: New viruses could cost you big time!",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a05be5517a83f5b",
+        "merchant": "McAfee",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a05bb2a397cafcd_55",
+      "user_id": "u_301",
+      "subject": "🎉 Your free Paperpal credits are here",
+      "sender": "Team Paperpal <hello@info.paperpal.com>",
+      "date": "2026-09-01T06:40:27.000Z",
+      "snippet": "From/Content: Team Paperpal. Cadence: monthly. Subject: 🎉 Your free Paperpal credits are here",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a05bb2a397cafcd",
+        "merchant": "Team Paperpal",
+        "cadence": "monthly",
+        "confidence": 70
+      }
+    },
+    {
+      "event_id": "gmail_1a05adcf58d9acd0_56",
+      "user_id": "u_301",
+      "subject": "Last chance to save on a year of learning.",
+      "sender": "Udemy <hello@students.udemy.com>",
+      "date": "2026-09-01T02:47:04.000Z",
+      "snippet": "From/Content: Udemy. Subject: Last chance to save on a year of learning.",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a05adcf58d9acd0",
+        "merchant": "Udemy",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a0596cccecc3b86_57",
+      "user_id": "u_301",
+      "subject": "Meet the New ROG Lineup at Gamescom 2026 🎮",
+      "sender": "ASUS India <noreply@nedm.asus.com>",
+      "date": "2026-08-31T20:04:51.000Z",
+      "snippet": "From/Content: ASUS India. Subject: Meet the New ROG Lineup at Gamescom 2026 🎮",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0596cccecc3b86",
+        "merchant": "ASUS India",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a056c0909bfc5eb_58",
+      "user_id": "u_301",
+      "subject": "Your Protection Score has dropped!",
+      "sender": "McAfee <mcafee@email.mcafee.com>",
+      "date": "2026-08-31T07:37:35.000Z",
+      "snippet": "From/Content: McAfee. Subject: Your Protection Score has dropped!",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a056c0909bfc5eb",
+        "merchant": "McAfee",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a055c64d43c90f3_59",
+      "user_id": "u_301",
+      "subject": "A full year of career growth: Save with a Udemy Personal Plan annual subscription",
+      "sender": "Udemy <hello@students.udemy.com>",
+      "date": "2026-08-31T03:04:12.000Z",
+      "snippet": "From/Content: Udemy. Cadence: yearly. Subject: A full year of career growth: Save with a Udemy Personal Plan annual subscription",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a055c64d43c90f3",
+        "merchant": "Udemy",
+        "cadence": "yearly",
+        "confidence": 70
+      }
+    },
+    {
+      "event_id": "gmail_1a0519a84f964a2b_60",
+      "user_id": "u_301",
+      "subject": "Your online connection may be exposed!",
+      "sender": "McAfee <mcafee@email.mcafee.com>",
+      "date": "2026-08-30T07:37:55.000Z",
+      "snippet": "From/Content: McAfee. Subject: Your online connection may be exposed!",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0519a84f964a2b",
+        "merchant": "McAfee",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a050fad7ad6321f_61",
+      "user_id": "u_301",
+      "subject": "Master the Way of the Sword with AMD & ASUS ⚔️",
+      "sender": "ASUS India <noreply@nedm.asus.com>",
+      "date": "2026-08-30T04:43:27.000Z",
+      "snippet": "From/Content: ASUS India. Subject: Master the Way of the Sword with AMD & ASUS ⚔️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a050fad7ad6321f",
+        "merchant": "ASUS India",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a04e1cb8084c7f1_62",
+      "user_id": "u_301",
+      "subject": "17 people viewed your profile",
+      "sender": "LinkedIn <messages-noreply@linkedin.com>",
+      "date": "2026-08-29T15:21:40.000Z",
+      "snippet": "From/Content: LinkedIn. Subject: 17 people viewed your profile",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a04e1cb8084c7f1",
+        "merchant": "LinkedIn",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a04d00d9b14c72f_63",
+      "user_id": "u_301",
+      "subject": "Upgrade to RTX 50 Series & Get CONTROL Resonant",
+      "sender": "ASUS India <noreply@nedm.asus.com>",
+      "date": "2026-08-29T10:11:31.000Z",
+      "snippet": "From/Content: ASUS India. Subject: Upgrade to RTX 50 Series & Get CONTROL Resonant",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a04d00d9b14c72f",
+        "merchant": "ASUS India",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a04c6ef5097304a_64",
+      "user_id": "u_301",
+      "subject": "42 million threats could find you!",
+      "sender": "McAfee <mcafee@email.mcafee.com>",
+      "date": "2026-08-29T07:32:14.000Z",
+      "snippet": "From/Content: McAfee. Subject: 42 million threats could find you!",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a04c6ef5097304a",
+        "merchant": "McAfee",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a04c654bd22f568_65",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "Dandu Chandra Shikara <invitations@linkedin.com>",
+      "date": "2026-08-29T07:21:40.000Z",
+      "snippet": "From/Content: Dandu Chandra Shikara. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a04c654bd22f568",
+        "merchant": "Dandu Chandra Shikara",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a04bcc6926a23d8_66",
+      "user_id": "u_301",
+      "subject": "Save big on Coursera Plus: Now ₹7,499/year",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-08-29T04:34:41.000Z",
+      "snippet": "From/Content: Coursera. Amount: INR 7.49. Subject: Save big on Coursera Plus: Now ₹7,499/year",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a04bcc6926a23d8",
+        "merchant": "Coursera",
+        "amount": 7.49,
+        "currency": "INR",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a049d21c18fd3db_67",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "Harshini Purthala <invitations@linkedin.com>",
+      "date": "2026-08-28T19:21:41.000Z",
+      "snippet": "From/Content: Harshini Purthala. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a049d21c18fd3db",
+        "merchant": "Harshini Purthala",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a0474c57601ee7c_68",
+      "user_id": "u_301",
+      "subject": "Your protection has ended!",
+      "sender": "McAfee <mcafee@email.mcafee.com>",
+      "date": "2026-08-28T07:36:19.000Z",
+      "snippet": "From/Content: McAfee. Subject: Your protection has ended!",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0474c57601ee7c",
+        "merchant": "McAfee",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a0468c3a132561d_69",
+      "user_id": "u_301",
+      "subject": "Now ₹7,499/year: Learn from Microsoft experts",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-08-28T04:06:29.000Z",
+      "snippet": "From/Content: Coursera. Amount: INR 7.49. Subject: Now ₹7,499/year: Learn from Microsoft experts",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0468c3a132561d",
+        "merchant": "Coursera",
+        "amount": 7.49,
+        "currency": "INR",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a04225706766c88_70",
+      "user_id": "u_301",
+      "subject": "Notification for you!",
+      "sender": "McAfee <mcafee@email.mcafee.com>",
+      "date": "2026-08-27T07:35:44.000Z",
+      "snippet": "From/Content: McAfee. Subject: Notification for you!",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a04225706766c88",
+        "merchant": "McAfee",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a040da3f482e322_71",
+      "user_id": "u_301",
+      "subject": "Your upload just unlocked Premium",
+      "sender": "Studocu <hello@studocu.com>",
+      "date": "2026-08-27T01:33:59.000Z",
+      "snippet": "From/Content: Studocu. Subject: Your upload just unlocked Premium",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a040da3f482e322",
+        "merchant": "Studocu",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a040cdaafaa90d4_72",
+      "user_id": "u_301",
+      "subject": "How many stars would you give us? ⭐️",
+      "sender": "Studocu <hello@studocu.com>",
+      "date": "2026-08-27T01:20:15.000Z",
+      "snippet": "From/Content: Studocu. Subject: How many stars would you give us? ⭐️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a040cdaafaa90d4",
+        "merchant": "Studocu",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a03f855efbbf4c8_73",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "Revanth Mani tej <invitations@linkedin.com>",
+      "date": "2026-08-26T19:21:39.000Z",
+      "snippet": "From/Content: Revanth Mani tej. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a03f855efbbf4c8",
+        "merchant": "Revanth Mani tej",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a03f1781677bc55_74",
+      "user_id": "u_301",
+      "subject": "15 people viewed your profile",
+      "sender": "LinkedIn <messages-noreply@linkedin.com>",
+      "date": "2026-08-26T17:21:39.000Z",
+      "snippet": "From/Content: LinkedIn. Subject: 15 people viewed your profile",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a03f1781677bc55",
+        "merchant": "LinkedIn",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a03ea3e15bc321d_75",
+      "user_id": "u_301",
+      "subject": "Shubham, here's your beginner’s guide to Upwork",
+      "sender": "Upwork <upwork@email.upwork.com>",
+      "date": "2026-08-26T15:15:21.000Z",
+      "snippet": "From/Content: Upwork. Subject: Shubham, here's your beginner’s guide to Upwork",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a03ea3e15bc321d",
+        "merchant": "Upwork",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a03d5f748071aac_76",
+      "user_id": "u_301",
+      "subject": "Your order#260826428DA8711494 on https://icici.myclassboard.com is successful.",
+      "sender": "orders@ccavenue.com",
+      "date": "2026-08-26T09:12:33.000Z",
+      "snippet": "From/Content: Ccavenue. Subject: Your order#260826428DA8711494 on https://icici.myclassboard.com is successful.",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a03d5f748071aac",
+        "merchant": "Ccavenue",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a03d57cc986b9de_77",
+      "user_id": "u_301",
+      "subject": "Fee Payment Received - KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY",
+      "sender": "KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY <MVA@myclassboard.in>",
+      "date": "2026-08-26T09:12:39.000Z",
+      "snippet": "From/Content: KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY. Type: receipt. Subject: Fee Payment Received - KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY",
+      "event_type": "receipt",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a03d57cc986b9de",
+        "merchant": "KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY",
+        "confidence": 75
+      }
+    },
+    {
+      "event_id": "gmail_1a03d578ab2b18a1_78",
+      "user_id": "u_301",
+      "subject": "New in Paperpal: Smarter, connected workflows with Library and Agents",
+      "sender": "Nolita from Paperpal <hello@info.paperpal.com>",
+      "date": "2026-08-26T09:12:21.000Z",
+      "snippet": "From/Content: Nolita from Paperpal. Cadence: monthly. Subject: New in Paperpal: Smarter, connected workflows with Library and Agents",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a03d578ab2b18a1",
+        "merchant": "Nolita from Paperpal",
+        "cadence": "monthly",
+        "confidence": 70
+      }
+    },
+    {
+      "event_id": "gmail_1a03d037d42f98ad_79",
+      "user_id": "u_301",
+      "subject": "Your protection expires tomorrow",
+      "sender": "McAfee <mcafee@email.mcafee.com>",
+      "date": "2026-08-26T07:40:33.000Z",
+      "snippet": "From/Content: McAfee. Subject: Your protection expires tomorrow",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a03d037d42f98ad",
+        "merchant": "McAfee",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a03992e1ba23e2c_80",
+      "user_id": "u_301",
+      "subject": "📢 Sale extended — 50% off Pro",
+      "sender": "Codecademy <learn@itr.mail.codecademy.com>",
+      "date": "2026-08-25T15:38:41.000Z",
+      "snippet": "From/Content: Codecademy. Subject: 📢 Sale extended — 50% off Pro",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a03992e1ba23e2c",
+        "merchant": "Codecademy",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a0361468dea1944_81",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "Varun V <invitations@linkedin.com>",
+      "date": "2026-08-24T23:21:42.000Z",
+      "snippet": "From/Content: Varun V. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0361468dea1944",
+        "merchant": "Varun V",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a0347e8f75b8aee_82",
+      "user_id": "u_301",
+      "subject": "50% off Pro ends today",
+      "sender": "Codecademy <learn@itr.mail.codecademy.com>",
+      "date": "2026-08-24T15:58:24.000Z",
+      "snippet": "From/Content: Codecademy. Subject: 50% off Pro ends today",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0347e8f75b8aee",
+        "merchant": "Codecademy",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a034616e8468c75_83",
+      "user_id": "u_301",
+      "subject": "🔥Look How ROG Changes the Way Your Games Look!",
+      "sender": "ASUS India <noreply@nedm.asus.com>",
+      "date": "2026-08-24T15:26:30.000Z",
+      "snippet": "From/Content: ASUS India. Subject: 🔥Look How ROG Changes the Way Your Games Look!",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a034616e8468c75",
+        "merchant": "ASUS India",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a02cd1ff19fb8eb_84",
+      "user_id": "u_301",
+      "subject": "Coursera Plus now ₹7,499/year: Save on your next skill",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-08-23T04:12:34.000Z",
+      "snippet": "From/Content: Coursera. Amount: INR 7.49. Subject: Coursera Plus now ₹7,499/year: Save on your next skill",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a02cd1ff19fb8eb",
+        "merchant": "Coursera",
+        "amount": 7.49,
+        "currency": "INR",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a02a7e17ed6ccb9_85",
+      "user_id": "u_301",
+      "subject": "12 people viewed your profile",
+      "sender": "LinkedIn <messages-noreply@linkedin.com>",
+      "date": "2026-08-22T17:21:41.000Z",
+      "snippet": "From/Content: LinkedIn. Subject: 12 people viewed your profile",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a02a7e17ed6ccb9",
+        "merchant": "LinkedIn",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a029a257e4ca469_86",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "Marri Siri Valli <invitations@linkedin.com>",
+      "date": "2026-08-22T13:21:39.000Z",
+      "snippet": "From/Content: Marri Siri Valli. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a029a257e4ca469",
+        "merchant": "Marri Siri Valli",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a024a9d4df25910_87",
+      "user_id": "u_301",
+      "subject": "PRO SALE | Join today and save 50%",
+      "sender": "Codecademy <learn@itr.mail.codecademy.com>",
+      "date": "2026-08-21T14:11:44.000Z",
+      "snippet": "From/Content: Codecademy. Cadence: yearly. Subject: PRO SALE | Join today and save 50%",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a024a9d4df25910",
+        "merchant": "Codecademy",
+        "cadence": "yearly",
+        "confidence": 70
+      }
+    },
+    {
+      "event_id": "gmail_1a0205d9ff9dfb84_88",
+      "user_id": "u_301",
+      "subject": "✨ New from Microsoft: Learn Enterprise AI Governance",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-08-20T18:10:00.000Z",
+      "snippet": "From/Content: Coursera. Amount: USD 35.4. Subject: ✨ New from Microsoft: Learn Enterprise AI Governance",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0205d9ff9dfb84",
+        "merchant": "Coursera",
+        "amount": 35.4,
+        "currency": "USD",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a01e93f1fefcbab_89",
+      "user_id": "u_301",
+      "subject": "Power Up Your Game with ASUS GeForce RTX™ 5060 Ti/5060 🚀",
+      "sender": "ASUS India <noreply@nedm.asus.com>",
+      "date": "2026-08-20T09:50:02.000Z",
+      "snippet": "From/Content: ASUS India. Subject: Power Up Your Game with ASUS GeForce RTX™ 5060 Ti/5060 🚀",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a01e93f1fefcbab",
+        "merchant": "ASUS India",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a01a9d21084470c_90",
+      "user_id": "u_301",
+      "subject": "10 people viewed your profile",
+      "sender": "LinkedIn <messages-noreply@linkedin.com>",
+      "date": "2026-08-19T15:21:40.000Z",
+      "snippet": "From/Content: LinkedIn. Subject: 10 people viewed your profile",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a01a9d21084470c",
+        "merchant": "LinkedIn",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a01a52f26efa3be_91",
+      "user_id": "u_301",
+      "subject": "You have 1 new invitation",
+      "sender": "LinkedIn <notifications-noreply@linkedin.com>",
+      "date": "2026-08-19T14:00:38.000Z",
+      "snippet": "From/Content: LinkedIn. Subject: You have 1 new invitation",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a01a52f26efa3be",
+        "merchant": "LinkedIn",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a01839c47074a6e_92",
+      "user_id": "u_301",
+      "subject": "🚀 Now ₹7,499/year: Build skills for what's next",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-08-19T04:13:53.000Z",
+      "snippet": "From/Content: Coursera. Amount: INR 7.49. Subject: 🚀 Now ₹7,499/year: Build skills for what's next",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a01839c47074a6e",
+        "merchant": "Coursera",
+        "amount": 7.49,
+        "currency": "INR",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a017585779c56f9_93",
+      "user_id": "u_301",
+      "subject": "Shubham, thanks for being a valued member",
+      "sender": "LinkedIn Premium <linkedin@em.linkedin.com>",
+      "date": "2026-08-19T00:07:38.000Z",
+      "snippet": "From/Content: LinkedIn Premium. Subject: Shubham, thanks for being a valued member",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a017585779c56f9",
+        "merchant": "LinkedIn Premium",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a013e9e88cc8b78_94",
+      "user_id": "u_301",
+      "subject": "Ready to Claim Your ROG Gamescom 2026 Prize? 👀",
+      "sender": "ASUS India <noreply@nedm.asus.com>",
+      "date": "2026-08-18T08:08:07.000Z",
+      "snippet": "From/Content: ASUS India. Amount: USD 10000. Subject: Ready to Claim Your ROG Gamescom 2026 Prize? 👀",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a013e9e88cc8b78",
+        "merchant": "ASUS India",
+        "amount": 10000,
+        "currency": "USD",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a0133dbefe9c9f8_95",
+      "user_id": "u_301",
+      "subject": "Get 60% off & save hours per paper",
+      "sender": "Team Paperpal <hello@info.paperpal.com>",
+      "date": "2026-08-18T05:00:08.000Z",
+      "snippet": "From/Content: Team Paperpal. Subject: Get 60% off & save hours per paper",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0133dbefe9c9f8",
+        "merchant": "Team Paperpal",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a010573f880e671_96",
+      "user_id": "u_301",
+      "subject": "Final hours to get 50% off Pro",
+      "sender": "Codecademy <learn@itr.mail.codecademy.com>",
+      "date": "2026-08-17T15:29:07.000Z",
+      "snippet": "From/Content: Codecademy. Subject: Final hours to get 50% off Pro",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a010573f880e671",
+        "merchant": "Codecademy",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a00bb8dab3451b1_97",
+      "user_id": "u_301",
+      "subject": "Action required: Finish setting up your account",
+      "sender": "Grammarly <hello@mail.grammarly.com>",
+      "date": "2026-08-16T17:57:39.000Z",
+      "snippet": "From/Content: Grammarly. Subject: Action required: Finish setting up your account",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a00bb8dab3451b1",
+        "merchant": "Grammarly",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a00603b537b423a_98",
+      "user_id": "u_301",
+      "subject": "8 people viewed your profile",
+      "sender": "LinkedIn <messages-noreply@linkedin.com>",
+      "date": "2026-08-15T15:21:41.000Z",
+      "snippet": "From/Content: LinkedIn. Subject: 8 people viewed your profile",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a00603b537b423a",
+        "merchant": "LinkedIn",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a003de674ff6143_99",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "Srinath Vyas <invitations@linkedin.com>",
+      "date": "2026-08-15T05:21:42.000Z",
+      "snippet": "From/Content: Srinath Vyas. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a003de674ff6143",
+        "merchant": "Srinath Vyas",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_19ffea44a48a6a48_100",
+      "user_id": "u_301",
+      "subject": "60% Off: Freedom to Learn, Write & Achieve",
+      "sender": "Team Paperpal <hello@info.paperpal.com>",
+      "date": "2026-08-14T05:00:07.000Z",
+      "snippet": "From/Content: Team Paperpal. Subject: 60% Off: Freedom to Learn, Write & Achieve",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "19ffea44a48a6a48",
+        "merchant": "Team Paperpal",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_19ffddea3bfeae14_101",
+      "user_id": "u_301",
+      "subject": "🚨 Last Few Days to Shop on ASUS Freedom Sale!",
+      "sender": "ASUS India <noreply@nedm.asus.com>",
+      "date": "2026-08-14T01:24:08.000Z",
+      "snippet": "From/Content: ASUS India. Subject: 🚨 Last Few Days to Shop on ASUS Freedom Sale!",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "19ffddea3bfeae14",
+        "merchant": "ASUS India",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_19ffa6d6d7c30d9f_102",
+      "user_id": "u_301",
+      "subject": "You have an invitation ✉️",
+      "sender": "Vivek Arunarthi <invitations@linkedin.com>",
+      "date": "2026-08-13T09:21:42.000Z",
+      "snippet": "From/Content: Vivek Arunarthi. Subject: You have an invitation ✉️",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "19ffa6d6d7c30d9f",
+        "merchant": "Vivek Arunarthi",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_19ff971d50188f01_103",
+      "user_id": "u_301",
+      "subject": "Subscription Confirmation",
+      "sender": "TCS iON <info.tcsionhub@tcsion.com>",
+      "date": "2026-08-13T04:46:54.000Z",
+      "snippet": "From/Content: TCS iON. Subject: Subscription Confirmation",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "19ff971d50188f01",
+        "merchant": "TCS iON",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_19fe03fc3f328ba9_104",
+      "user_id": "u_301",
+      "subject": "I want to connect",
+      "sender": "Meghana Arruru <invitations@linkedin.com>",
+      "date": "2026-08-08T07:21:42.000Z",
+      "snippet": "From/Content: Meghana Arruru. Subject: I want to connect",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "19fe03fc3f328ba9",
+        "merchant": "Meghana Arruru",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_19fc5934d4fff60a_105",
+      "user_id": "u_301",
+      "subject": "👋 How's it going with Reclaim, Shubham?",
+      "sender": "\"Henry, Reclaim Co-founder\" <support@reclaim.ai>",
+      "date": "2026-08-03T03:03:12.000Z",
+      "snippet": "From/Content: \"Henry, Reclaim Co-founder\". Subject: 👋 How's it going with Reclaim, Shubham?",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "19fc5934d4fff60a",
+        "merchant": "\"Henry, Reclaim Co-founder\"",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_19fb62b10ecabcd2_106",
+      "user_id": "u_301",
+      "subject": "Final edition: your exclusive access series",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-07-31T03:15:02.000Z",
+      "snippet": "From/Content: Coursera. Subject: Final edition: your exclusive access series",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "19fb62b10ecabcd2",
+        "merchant": "Coursera",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_19fadf2491f33e93_107",
+      "user_id": "u_301",
+      "subject": "🚨 Master AI Photo Editing with a Pro!",
+      "sender": "ASUS India <noreply@nedm.asus.com>",
+      "date": "2026-07-29T12:56:01.000Z",
+      "snippet": "From/Content: ASUS India. Subject: 🚨 Master AI Photo Editing with a Pro!",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "19fadf2491f33e93",
+        "merchant": "ASUS India",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_19fa473feac81c9b_108",
+      "user_id": "u_301",
+      "subject": "Extended: 50% off Pro",
+      "sender": "Codecademy <learn@itr.mail.codecademy.com>",
+      "date": "2026-07-27T16:41:32.000Z",
+      "snippet": "From/Content: Codecademy. Subject: Extended: 50% off Pro",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "19fa473feac81c9b",
+        "merchant": "Codecademy",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_19f9a4c0ad76caca_109",
+      "user_id": "u_301",
+      "subject": "3 profile views",
+      "sender": "LinkedIn <messages-noreply@linkedin.com>",
+      "date": "2026-07-25T17:21:41.000Z",
+      "snippet": "From/Content: LinkedIn. Subject: 3 profile views",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "19f9a4c0ad76caca",
+        "merchant": "LinkedIn",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_19f87284d030f516_110",
+      "user_id": "u_301",
+      "subject": "You now have exclusive access to AI features",
+      "sender": "The Google Workspace Team <workspace-noreply@google.com>",
+      "date": "2026-07-22T00:09:52.000Z",
+      "snippet": "From/Content: The Google Workspace Team. Subject: You now have exclusive access to AI features",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "19f87284d030f516",
+        "merchant": "The Google Workspace Team",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_19f856571ec6d527_111",
+      "user_id": "u_301",
+      "subject": "🌧️Monsoon Deals Are Here - Upgrade Your Tech Today💻✅",
+      "sender": "ASUS India <noreply@nedm.asus.com>",
+      "date": "2026-07-21T15:57:19.000Z",
+      "snippet": "From/Content: ASUS India. Subject: 🌧️Monsoon Deals Are Here - Upgrade Your Tech Today💻✅",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "19f856571ec6d527",
+        "merchant": "ASUS India",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_19f5ca9baad8f53a_112",
+      "user_id": "u_301",
+      "subject": "Save 50% on Pro for a limited time",
+      "sender": "Codecademy <learn@itr.mail.codecademy.com>",
+      "date": "2026-07-13T18:07:34.000Z",
+      "snippet": "From/Content: Codecademy. Subject: Save 50% on Pro for a limited time",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "19f5ca9baad8f53a",
+        "merchant": "Codecademy",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_19f41b2cd359a066_113",
+      "user_id": "u_301",
+      "subject": "📸 ASUS ProArt Meet",
+      "sender": "ASUS India <noreply@nedm.asus.com>",
+      "date": "2026-07-08T12:27:39.000Z",
+      "snippet": "From/Content: ASUS India. Subject: 📸 ASUS ProArt Meet",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "19f41b2cd359a066",
+        "merchant": "ASUS India",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_19f1a0c815a24e71_114",
+      "user_id": "u_301",
+      "subject": "Updates to Render's Privacy Policy and Terms of Service",
+      "sender": "Render <no-reply@render.com>",
+      "date": "2026-06-30T19:40:50.000Z",
+      "snippet": "From/Content: Render. Subject: Updates to Render's Privacy Policy and Terms of Service",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "19f1a0c815a24e71",
+        "merchant": "Render",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_19f07b76f11fe879_115",
+      "user_id": "u_301",
+      "subject": "Introducing ASUS NUC 16 Pro – Compact. Powerful. AI-Ready.",
+      "sender": "ASUS India <noreply@nedm.asus.com>",
+      "date": "2026-06-27T06:14:44.000Z",
+      "snippet": "From/Content: ASUS India. Subject: Introducing ASUS NUC 16 Pro – Compact. Powerful. AI-Ready.",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "19f07b76f11fe879",
+        "merchant": "ASUS India",
+        "confidence": 60
+      }
+    }
+  ],
+  "subscriptions": [
+    {
+      "subscription_id": "sub_gmail_0_1789782751350",
+      "merchant": "Spotify",
+      "category": "general",
+      "amount": 119,
+      "currency": "INR",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 100,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_1_1789782751350",
+      "merchant": "ASUS India",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_2_1789782751350",
+      "merchant": "Codecademy",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_3_1789782751350",
+      "merchant": "Sree Keerthana",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_4_1789782751350",
+      "merchant": "Ananya Bhatt",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_5_1789782751350",
+      "merchant": "ASUS India",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_6_1789782751350",
+      "merchant": "LinkedIn",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_7_1789782751350",
+      "merchant": "Udemy",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_8_1789782751350",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 7.49,
+      "currency": "INR",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_9_1789782751350",
+      "merchant": "Ccavenue",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_10_1789782751350",
+      "merchant": "KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 75,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_11_1789782751350",
+      "merchant": "Team Unstop",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_12_1789782751350",
+      "merchant": "ASUS India",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_13_1789782751350",
+      "merchant": "Manikandan Selvaraj",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_14_1789782751350",
+      "merchant": "Gargi Aseri",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_15_1789782751350",
+      "merchant": "GANESH SUTHOJU",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_16_1789782751350",
+      "merchant": "Aviral Rawat",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_17_1789782751350",
+      "merchant": "Shreya Chowdary Chennupati",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_18_1789782751350",
+      "merchant": "Udemy",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "yearly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 70,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_19_1789782751350",
+      "merchant": "LinkedIn",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_20_1789782751350",
+      "merchant": "TAQI HUSSAIN",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_21_1789782751350",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 7.49,
+      "currency": "INR",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_22_1789782751350",
+      "merchant": "LinkedIn",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_23_1789782751350",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 35.4,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_24_1789782751350",
+      "merchant": "Codecademy",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_25_1789782751350",
+      "merchant": "Nolita from Paperpal",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_26_1789782751350",
+      "merchant": "Rama reddy",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_27_1789782751350",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 7.49,
+      "currency": "INR",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_28_1789782751350",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_29_1789782751350",
+      "merchant": "Abhishek Kumar",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_30_1789782751350",
+      "merchant": "Pallavi Pabbathi",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_31_1789782751350",
+      "merchant": "Codecademy",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "yearly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 70,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_32_1789782751350",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_33_1789782751350",
+      "merchant": "Shiva Bandi",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_34_1789782751350",
+      "merchant": "Buddy4Study",
+      "category": "general",
+      "amount": 2,
+      "currency": "INR",
+      "cadence": "yearly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 90,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_35_1789782751350",
+      "merchant": "LinkedIn",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_36_1789782751350",
+      "merchant": "Ishanth Chetpally",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_37_1789782751350",
+      "merchant": "ABINASH KANKANALA",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_38_1789782751350",
+      "merchant": "Zoom",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_39_1789782751350",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 7.49,
+      "currency": "INR",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_40_1789782751350",
+      "merchant": "McAfee",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_41_1789782751350",
+      "merchant": "REBBA SAI PAVAN",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_42_1789782751350",
+      "merchant": "Runway",
+      "category": "general",
+      "amount": 69,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_43_1789782751350",
+      "merchant": "ASUS India",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_44_1789782751350",
+      "merchant": "Mohit Peddamatham",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_45_1789782751350",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 7.49,
+      "currency": "INR",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_46_1789782751350",
+      "merchant": "LinkedIn Premium",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 75,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_47_1789782751350",
+      "merchant": "Pranathi A",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_48_1789782751350",
+      "merchant": "McAfee",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_49_1789782751350",
+      "merchant": "ASUS India",
+      "category": "general",
+      "amount": 15,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_50_1789782751350",
+      "merchant": "LinkedIn",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_51_1789782751350",
+      "merchant": "McAfee",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_52_1789782751350",
+      "merchant": "Google Play",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_53_1789782751350",
+      "merchant": "Yasvantt P",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_54_1789782751350",
+      "merchant": "McAfee",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_55_1789782751350",
+      "merchant": "Team Paperpal",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 70,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_56_1789782751350",
+      "merchant": "Udemy",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_57_1789782751350",
+      "merchant": "ASUS India",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_58_1789782751350",
+      "merchant": "McAfee",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_59_1789782751350",
+      "merchant": "Udemy",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "yearly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 70,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_60_1789782751350",
+      "merchant": "McAfee",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_61_1789782751350",
+      "merchant": "ASUS India",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_62_1789782751350",
+      "merchant": "LinkedIn",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_63_1789782751350",
+      "merchant": "ASUS India",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_64_1789782751350",
+      "merchant": "McAfee",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_65_1789782751350",
+      "merchant": "Dandu Chandra Shikara",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_66_1789782751350",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 7.49,
+      "currency": "INR",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_67_1789782751350",
+      "merchant": "Harshini Purthala",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_68_1789782751350",
+      "merchant": "McAfee",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_69_1789782751350",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 7.49,
+      "currency": "INR",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_70_1789782751350",
+      "merchant": "McAfee",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_71_1789782751350",
+      "merchant": "Studocu",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_72_1789782751350",
+      "merchant": "Studocu",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_73_1789782751350",
+      "merchant": "Revanth Mani tej",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_74_1789782751350",
+      "merchant": "LinkedIn",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_75_1789782751350",
+      "merchant": "Upwork",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_76_1789782751350",
+      "merchant": "Ccavenue",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_77_1789782751350",
+      "merchant": "KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 75,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_78_1789782751350",
+      "merchant": "Nolita from Paperpal",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 70,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_79_1789782751350",
+      "merchant": "McAfee",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_80_1789782751350",
+      "merchant": "Codecademy",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_81_1789782751350",
+      "merchant": "Varun V",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_82_1789782751350",
+      "merchant": "Codecademy",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_83_1789782751350",
+      "merchant": "ASUS India",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_84_1789782751350",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 7.49,
+      "currency": "INR",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_85_1789782751350",
+      "merchant": "LinkedIn",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_86_1789782751350",
+      "merchant": "Marri Siri Valli",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_87_1789782751350",
+      "merchant": "Codecademy",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "yearly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 70,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_88_1789782751350",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 35.4,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_89_1789782751350",
+      "merchant": "ASUS India",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_90_1789782751350",
+      "merchant": "LinkedIn",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_91_1789782751350",
+      "merchant": "LinkedIn",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_92_1789782751350",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 7.49,
+      "currency": "INR",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_93_1789782751350",
+      "merchant": "LinkedIn Premium",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_94_1789782751350",
+      "merchant": "ASUS India",
+      "category": "general",
+      "amount": 10000,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_95_1789782751350",
+      "merchant": "Team Paperpal",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_96_1789782751350",
+      "merchant": "Codecademy",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_97_1789782751350",
+      "merchant": "Grammarly",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_98_1789782751350",
+      "merchant": "LinkedIn",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_99_1789782751350",
+      "merchant": "Srinath Vyas",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_100_1789782751350",
+      "merchant": "Team Paperpal",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_101_1789782751350",
+      "merchant": "ASUS India",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_102_1789782751350",
+      "merchant": "Vivek Arunarthi",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_103_1789782751350",
+      "merchant": "TCS iON",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_104_1789782751350",
+      "merchant": "Meghana Arruru",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_105_1789782751350",
+      "merchant": "\"Henry, Reclaim Co-founder\"",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_106_1789782751350",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_107_1789782751350",
+      "merchant": "ASUS India",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_108_1789782751350",
+      "merchant": "Codecademy",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_109_1789782751350",
+      "merchant": "LinkedIn",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_110_1789782751350",
+      "merchant": "The Google Workspace Team",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_111_1789782751350",
+      "merchant": "ASUS India",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_112_1789782751350",
+      "merchant": "Codecademy",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_113_1789782751350",
+      "merchant": "ASUS India",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_114_1789782751350",
+      "merchant": "Render",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_115_1789782751350",
+      "merchant": "ASUS India",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    }
+  ]
+}

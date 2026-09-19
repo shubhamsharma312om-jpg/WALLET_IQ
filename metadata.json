@@ -1,0 +1,6 @@
+{
+  "name": "WALLET_IQ",
+  "description": "Subscription & Recurring-Spend Guardian Agent - Autonomous Subscription Audit and Guardrail Enforcement",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
