@@ -472,7 +472,7 @@ export function createApiRouter(): Router {
       const activeTokens = gmailTokenStore.getTokens(oauthUserId);
       const provider = new GmailProvider(activeTokens!.tokens.access_token);
       
-      const scanResult = await provider.scanEmails(activeTokens!.email);
+      const scanResult = await provider.scanEmails(userId, activeTokens!.email);
       lastGmailScan = scanResult;
 
       // Write practical scan JSON artifact for demo/hackathon proof

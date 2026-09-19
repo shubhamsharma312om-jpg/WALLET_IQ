@@ -3,19 +3,25 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import {
-  Shield,
-  Layers,
-  FileJson,
+  Activity,
+  ArrowLeft,
+  ArrowRight,
   CheckCircle2,
   Database,
-  Play,
   FileCheck,
+  FileJson,
+  Layers,
   LayoutDashboard,
-  ArrowLeft,
+  LockKeyhole,
+  Mail,
+  Play,
+  Shield,
+  Sparkles,
+  Wallet,
 } from 'lucide-react';
-import { MainDashboard } from './frontend/dashboard/MainDashboard.tsx';
+import { MainDashboard, WorkspacePage } from './frontend/dashboard/MainDashboard.tsx';
 import { ArchitectureOverview } from './frontend/dashboard/ArchitectureOverview.tsx';
 import { ContractInspector } from './frontend/dashboard/ContractInspector.tsx';
 import { AdapterStatusPanel } from './frontend/dashboard/AdapterStatusPanel.tsx';
@@ -24,156 +30,197 @@ import { MockDataViewer } from './frontend/dashboard/MockDataViewer.tsx';
 import { WorkflowPipelineViewer } from './frontend/dashboard/WorkflowPipelineViewer.tsx';
 import { TestRunnerPanel } from './frontend/dashboard/TestRunnerPanel.tsx';
 
-export default function App() {
-  const [currentView, setCurrentView] = useState<'dashboard' | 'architect'>('dashboard');
-  const [architectTab, setArchitectTab] = useState<
-    'overview' | 'contracts' | 'adapters' | 'guardrails' | 'mockdata' | 'workflow' | 'tests'
-  >('overview');
+type RouteKey = 'home' | 'learn' | 'workspace' | 'architect';
 
-  if (currentView === 'dashboard') {
-    return (
-      <MainDashboard onOpenArchitectHub={() => setCurrentView('architect')} />
-    );
-  }
+type ArchitectTab = 'overview' | 'contracts' | 'adapters' | 'guardrails' | 'mockdata' | 'workflow' | 'tests';
+
+const workspacePath: Record<WorkspacePage, string> = {
+  overview: '/app',
+  subscriptions: '/app/subscriptions',
+  actions: '/app/actions',
+  activity: '/app/activity',
+  settings: '/app/settings',
+};
+
+function routeFromPath(pathname: string): { route: RouteKey; workspacePage: WorkspacePage } {
+  if (pathname === '/learn' || pathname === '/how-it-works') return { route: 'learn', workspacePage: 'overview' };
+  if (pathname === '/architect' || pathname.startsWith('/architect/')) return { route: 'architect', workspacePage: 'overview' };
+  if (pathname.startsWith('/app/subscriptions')) return { route: 'workspace', workspacePage: 'subscriptions' };
+  if (pathname.startsWith('/app/actions')) return { route: 'workspace', workspacePage: 'actions' };
+  if (pathname.startsWith('/app/activity')) return { route: 'workspace', workspacePage: 'activity' };
+  if (pathname.startsWith('/app/settings')) return { route: 'workspace', workspacePage: 'settings' };
+  if (pathname.startsWith('/app')) return { route: 'workspace', workspacePage: 'overview' };
+  return { route: 'home', workspacePage: 'overview' };
+}
+
+function Brand({ onClick }: { onClick: () => void }) {
+  return (
+    <button className="site-brand" onClick={onClick} aria-label="Wallet IQ home">
+      <span className="site-brand-mark"><Shield size={19} /></span>
+      <span>wallet<strong>iq</strong><b>.</b></span>
+    </button>
+  );
+}
+
+function PublicHeader({ navigate }: { navigate: (path: string) => void }) {
+  return (
+    <header className="site-header">
+      <div className="site-header-inner">
+        <Brand onClick={() => navigate('/')} />
+        <nav className="site-nav">
+          <button onClick={() => navigate('/how-it-works')}>How it works</button>
+          <button onClick={() => navigate('/app/subscriptions')}>Subscriptions</button>
+          <button onClick={() => navigate('/app/settings')}>Settings</button>
+        </nav>
+        <button className="site-header-cta" onClick={() => navigate('/app')}>Open workspace <ArrowRight size={15} /></button>
+      </div>
+    </header>
+  );
+}
+
+function HomePage({ navigate }: { navigate: (path: string) => void }) {
+  return (
+    <div className="public-site">
+      <PublicHeader navigate={navigate} />
+      <main>
+        <section className="site-hero">
+          <div className="site-hero-copy">
+            <p className="site-kicker"><Sparkles size={14} /> Your recurring spend, finally clear</p>
+            <h1>Spend less attention<br />on subscriptions.</h1>
+            <p className="site-hero-lede">Wallet IQ finds recurring charges from your Gmail billing emails, organizes them, and puts every sensitive action behind your rules.</p>
+            <div className="site-hero-actions">
+              <button className="site-primary-cta" onClick={() => navigate('/app')}>Enter your workspace <ArrowRight size={16} /></button>
+              <button className="site-secondary-cta" onClick={() => navigate('/how-it-works')}><Play size={15} /> Watch how it works</button>
+            </div>
+            <div className="site-trust-row">
+              <span><CheckCircle2 size={14} /> Read-only Gmail</span>
+              <span><CheckCircle2 size={14} /> Human approval guardrails</span>
+              <span><CheckCircle2 size={14} /> Traceable actions</span>
+            </div>
+          </div>
+          <div className="site-hero-visual">
+            <div className="site-visual-orbit" />
+            <img src="/media/more-life.webp" alt="A calm lifestyle scene representing more room for what matters" />
+            <div className="site-floating-card top">
+              <span>Potential monthly savings</span>
+              <strong>$83.46</strong>
+              <small>Across detected recurring spend</small>
+            </div>
+            <div className="site-floating-card bottom">
+              <span className="site-live-dot" />
+              <div><strong>Gmail connected</strong><small>Ready for a fresh scan</small></div>
+            </div>
+          </div>
+        </section>
+
+        <section className="site-proof-strip">
+          <div><strong>01</strong><span>Connect Gmail</span></div>
+          <div><strong>02</strong><span>Detect recurring spend</span></div>
+          <div><strong>03</strong><span>Review recommendations</span></div>
+          <div><strong>04</strong><span>Approve what matters</span></div>
+        </section>
+
+        <section className="site-feature-section">
+          <div className="site-section-copy">
+            <p className="site-kicker">DESIGNED FOR CALM</p>
+            <h2>One product.<br />Clear places for every task.</h2>
+            <p>The workspace is intentionally split into focused pages instead of forcing every table, setting and approval into one endless dashboard.</p>
+          </div>
+          <div className="site-feature-grid">
+            <button onClick={() => navigate('/app/subscriptions')} className="site-feature-card">
+              <Wallet size={22} /><span>Subscriptions</span><strong>See the full recurring-spend inventory.</strong><ArrowRight size={17} />
+            </button>
+            <button onClick={() => navigate('/app/actions')} className="site-feature-card green">
+              <LockKeyhole size={22} /><span>Action Center</span><strong>Keep approvals and protected items separate.</strong><ArrowRight size={17} />
+            </button>
+            <button onClick={() => navigate('/app/activity')} className="site-feature-card">
+              <Activity size={22} /><span>Activity & savings</span><strong>Follow the audit trail and savings over time.</strong><ArrowRight size={17} />
+            </button>
+          </div>
+        </section>
+
+        <section className="site-video-preview">
+          <div>
+            <p className="site-kicker">PRODUCT WALKTHROUGH</p>
+            <h2>See Wallet IQ in motion.</h2>
+            <p>A short walkthrough shows the Gmail scan, subscription inventory, action review and guardrail settings as one connected flow.</p>
+            <button className="site-primary-cta" onClick={() => navigate('/how-it-works')}><Play size={15} /> Open walkthrough</button>
+          </div>
+          <button className="site-video-poster" onClick={() => navigate('/how-it-works')} aria-label="Play product walkthrough">
+            <img src="/media/more-life.webp" alt="" />
+            <span className="site-play-button"><Play size={24} fill="currentColor" /></span>
+            <span className="site-video-caption">Wallet IQ · 45 second overview</span>
+          </button>
+        </section>
+      </main>
+      <footer className="site-footer"><Brand onClick={() => navigate('/')} /><span>Subscription clarity without the clutter.</span><button onClick={() => navigate('/app')}>Open workspace</button></footer>
+    </div>
+  );
+}
+
+function LearnPage({ navigate }: { navigate: (path: string) => void }) {
+  return (
+    <div className="public-site learn-page">
+      <PublicHeader navigate={navigate} />
+      <main className="learn-main">
+        <section className="learn-hero">
+          <p className="site-kicker">HOW IT WORKS</p>
+          <h1>From inbox signal<br />to a decision you control.</h1>
+          <p>Wallet IQ uses your connected Gmail account as a read-only billing signal, then passes detected subscriptions through the existing decision and guardrail pipeline.</p>
+        </section>
+
+        <section className="learn-video-shell">
+          <div className="learn-video-copy">
+            <span>PRODUCT WALKTHROUGH</span>
+            <h2>A quick tour of the complete flow.</h2>
+            <p>The video is bundled with the project, so the player works locally during your demo without relying on YouTube or an internet connection.</p>
+          </div>
+          <video className="learn-video" controls preload="metadata" poster="/media/more-life.webp">
+            <source src="/media/wallet-iq-demo.mp4" type="video/mp4" />
+            Your browser does not support the video element.
+          </video>
+        </section>
+
+        <section className="learn-steps">
+          <article><span>01</span><Mail size={22} /><h3>Connect Gmail</h3><p>OAuth keeps credentials outside the app. Wallet IQ requests Gmail read-only access and stores the connection for the active session.</p></article>
+          <article><span>02</span><Database size={22} /><h3>Scan billing evidence</h3><p>Subscription, renewal, trial and price-change emails are normalized into structured signals for the audit pipeline.</p></article>
+          <article><span>03</span><Shield size={22} /><h3>Apply guardrails</h3><p>Protected categories, confidence thresholds and approval rules determine what can proceed automatically and what must wait for you.</p></article>
+          <article><span>04</span><Activity size={22} /><h3>Keep the trail</h3><p>Detected subscriptions, decisions, activity and savings remain visible on dedicated pages in the workspace.</p></article>
+        </section>
+
+        <section className="learn-cta">
+          <div><p className="site-kicker">READY TO USE IT?</p><h2>Open the workspace and run a live scan.</h2></div>
+          <button className="site-primary-cta" onClick={() => navigate('/app')}>Go to workspace <ArrowRight size={16} /></button>
+        </section>
+      </main>
+    </div>
+  );
+}
+
+function ArchitectHub({ onBack }: { onBack: () => void }) {
+  const [architectTab, setArchitectTab] = useState<ArchitectTab>('overview');
+
+  const tabs = useMemo(() => [
+    { id: 'overview' as const, label: 'Architecture & Flow', icon: <Shield className="w-3.5 h-3.5" /> },
+    { id: 'contracts' as const, label: 'Module Contracts', icon: <FileJson className="w-3.5 h-3.5" /> },
+    { id: 'adapters' as const, label: 'Adapters', icon: <Layers className="w-3.5 h-3.5" /> },
+    { id: 'guardrails' as const, label: 'Guardrails', icon: <Shield className="w-3.5 h-3.5" /> },
+    { id: 'mockdata' as const, label: 'Mock Data', icon: <Database className="w-3.5 h-3.5" /> },
+    { id: 'workflow' as const, label: 'Audit Pipeline', icon: <Play className="w-3.5 h-3.5" /> },
+    { id: 'tests' as const, label: 'Contract Tests', icon: <FileCheck className="w-3.5 h-3.5" /> },
+  ], []);
 
   return (
-    <div className="wallet-ui wallet-architect min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-indigo-500 selection:text-white">
-      {/* Top Header */}
-      <header className="border-b border-slate-800 bg-slate-900/90 backdrop-blur sticky top-0 z-30 px-4 sm:px-8 py-3.5">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <button
-              onClick={() => setCurrentView('dashboard')}
-              className="p-2 bg-slate-800 hover:bg-slate-700 rounded-lg text-slate-300 hover:text-white transition-colors flex items-center gap-1 text-xs font-semibold"
-              title="Return to Main Dashboard"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              <span className="hidden sm:inline">Main Dashboard</span>
-            </button>
-            <div className="p-2 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-lg text-white shadow-sm">
-              <Shield className="w-5 h-5" />
-            </div>
-            <div>
-              <div className="flex items-center space-x-2">
-                <span className="font-bold text-base tracking-tight text-white">WALLET_IQ</span>
-                <span className="text-xs font-mono px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
-                  Architect Hub & Contracts
-                </span>
-              </div>
-              <p className="text-xs text-slate-400">Subscription & Recurring-Spend Guardian Agent</p>
-            </div>
-          </div>
-
-          <div className="flex items-center space-x-2">
-            <button
-              onClick={() => setCurrentView('dashboard')}
-              className="px-3 py-1.5 bg-cyan-600 hover:bg-cyan-500 text-white rounded text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
-            >
-              <LayoutDashboard className="w-3.5 h-3.5" />
-              <span>Back to Dashboard</span>
-            </button>
-            <button
-              onClick={() => setArchitectTab('tests')}
-              className="px-3 py-1.5 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded text-xs font-mono flex items-center gap-1.5 transition-colors"
-            >
-              <CheckCircle2 className="w-3.5 h-3.5" />
-              <span>Contracts 16/16 Passed</span>
-            </button>
-          </div>
+    <div className="wallet-ui wallet-architect min-h-screen flex flex-col">
+      <header className="architect-header">
+        <div className="architect-header-inner">
+          <button onClick={onBack} className="wallet-secondary-button"><ArrowLeft className="w-4 h-4" />Workspace</button>
+          <div className="architect-title"><span><Shield size={20} /></span><div><strong>WALLET_IQ</strong><small>Architect Hub & Contracts</small></div></div>
+          <button onClick={() => setArchitectTab('tests')} className="architect-test-badge"><CheckCircle2 size={15} /> Contracts 16/16 passed</button>
         </div>
       </header>
-
-      {/* Navigation Bar */}
-      <div className="border-b border-slate-800/80 bg-slate-900/50 px-4 sm:px-8">
-        <div className="max-w-7xl mx-auto flex overflow-x-auto no-scrollbar gap-1 py-1 text-xs">
-          <button
-            onClick={() => setArchitectTab('overview')}
-            className={`px-3.5 py-2 rounded-lg font-medium whitespace-nowrap transition-colors flex items-center gap-1.5 ${
-              architectTab === 'overview'
-                ? 'bg-slate-800 text-white font-semibold'
-                : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
-            }`}
-          >
-            <Shield className="w-3.5 h-3.5 text-blue-400" />
-            Architecture & Flow
-          </button>
-
-          <button
-            onClick={() => setArchitectTab('contracts')}
-            className={`px-3.5 py-2 rounded-lg font-medium whitespace-nowrap transition-colors flex items-center gap-1.5 ${
-              architectTab === 'contracts'
-                ? 'bg-slate-800 text-white font-semibold'
-                : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
-            }`}
-          >
-            <FileJson className="w-3.5 h-3.5 text-cyan-400" />
-            Module Contracts (1, 2, 3)
-          </button>
-
-          <button
-            onClick={() => setArchitectTab('adapters')}
-            className={`px-3.5 py-2 rounded-lg font-medium whitespace-nowrap transition-colors flex items-center gap-1.5 ${
-              architectTab === 'adapters'
-                ? 'bg-slate-800 text-white font-semibold'
-                : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
-            }`}
-          >
-            <Layers className="w-3.5 h-3.5 text-purple-400" />
-            Adapter Interfaces & Routing
-          </button>
-
-          <button
-            onClick={() => setArchitectTab('guardrails')}
-            className={`px-3.5 py-2 rounded-lg font-medium whitespace-nowrap transition-colors flex items-center gap-1.5 ${
-              architectTab === 'guardrails'
-                ? 'bg-slate-800 text-white font-semibold'
-                : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
-            }`}
-          >
-            <Shield className="w-3.5 h-3.5 text-amber-400" />
-            Dynamic Guardrails
-          </button>
-
-          <button
-            onClick={() => setArchitectTab('mockdata')}
-            className={`px-3.5 py-2 rounded-lg font-medium whitespace-nowrap transition-colors flex items-center gap-1.5 ${
-              architectTab === 'mockdata'
-                ? 'bg-slate-800 text-white font-semibold'
-                : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
-            }`}
-          >
-            <Database className="w-3.5 h-3.5 text-emerald-400" />
-            Mock Data & Demo Cases
-          </button>
-
-          <button
-            onClick={() => setArchitectTab('workflow')}
-            className={`px-3.5 py-2 rounded-lg font-medium whitespace-nowrap transition-colors flex items-center gap-1.5 ${
-              architectTab === 'workflow'
-                ? 'bg-slate-800 text-white font-semibold'
-                : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
-            }`}
-          >
-            <Play className="w-3.5 h-3.5 text-indigo-400" />
-            Demo Audit Pipeline
-          </button>
-
-          <button
-            onClick={() => setArchitectTab('tests')}
-            className={`px-3.5 py-2 rounded-lg font-medium whitespace-nowrap transition-colors flex items-center gap-1.5 ${
-              architectTab === 'tests'
-                ? 'bg-slate-800 text-white font-semibold'
-                : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
-            }`}
-          >
-            <FileCheck className="w-3.5 h-3.5 text-emerald-400" />
-            Contract Test Suite
-          </button>
-        </div>
-      </div>
-
-      {/* Main Content Area */}
-      <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-8">
+      <div className="architect-tabs">{tabs.map(tab => <button key={tab.id} onClick={() => setArchitectTab(tab.id)} className={architectTab === tab.id ? 'active' : ''}>{tab.icon}{tab.label}</button>)}</div>
+      <main className="architect-main">
         {architectTab === 'overview' && <ArchitectureOverview />}
         {architectTab === 'contracts' && <ContractInspector />}
         {architectTab === 'adapters' && <AdapterStatusPanel />}
@@ -182,18 +229,36 @@ export default function App() {
         {architectTab === 'workflow' && <WorkflowPipelineViewer />}
         {architectTab === 'tests' && <TestRunnerPanel />}
       </main>
-
-      {/* Persistent Footer */}
-      <footer className="border-t border-slate-800/80 bg-slate-950 py-4 px-6 text-center text-xs text-slate-500">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span>
-            WALLET_IQ Hackathon Foundation • Lead Architect: Main Dashboard, Orchestrator & Final Integration
-          </span>
-          <span className="font-mono text-slate-400">
-            Node.js 22 + Native SQLite + Express + Vite + React
-          </span>
-        </div>
-      </footer>
     </div>
+  );
+}
+
+export default function App() {
+  const [locationState, setLocationState] = useState(() => routeFromPath(window.location.pathname));
+
+  useEffect(() => {
+    const onPopState = () => setLocationState(routeFromPath(window.location.pathname));
+    window.addEventListener('popstate', onPopState);
+    return () => window.removeEventListener('popstate', onPopState);
+  }, []);
+
+  const navigate = (path: string) => {
+    if (window.location.pathname !== path) window.history.pushState({}, '', path);
+    setLocationState(routeFromPath(path));
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  if (locationState.route === 'home') return <HomePage navigate={navigate} />;
+  if (locationState.route === 'learn') return <LearnPage navigate={navigate} />;
+  if (locationState.route === 'architect') return <ArchitectHub onBack={() => navigate('/app')} />;
+
+  return (
+    <MainDashboard
+      page={locationState.workspacePage}
+      onNavigate={(page) => navigate(workspacePath[page])}
+      onGoHome={() => navigate('/')}
+      onOpenLearn={() => navigate('/how-it-works')}
+      onOpenArchitectHub={() => navigate('/architect')}
+    />
   );
 }

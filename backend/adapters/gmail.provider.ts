@@ -137,6 +137,87 @@ export function detectCadence(subject: string, snippet: string): string | null {
   return null;
 }
 
+/**
+ * Detects if an email is purely promotional/marketing.
+ */
+export function isPromotionalEmail(subject: string, snippet: string): boolean {
+  const combined = `${subject} ${snippet}`.toLowerCase();
+  
+  const promotionalPatterns = [
+    /\b(50%|25%|75%|100%|amount|flat)\s*off\b/i,
+    /\bspecial\s*offer\b/i,
+    /\bdiscount\b/i,
+    /\bpromotion(al)?\b/i,
+    /\bcourse\s*offer\b/i,
+    /\bpremium\s*available\b/i,
+    /\bupgrade\s*now\b/i,
+    /\bjoin\s*now\b/i,
+    /\badvertisement\b/i,
+    /\bsale\b/i,
+    /\bcoupon\b/i,
+    /\bnewsletter\b/i,
+    /\bblack\s*friday\b/i,
+    /\blimited\s*time\b/i,
+    /\bsubscribe\s*today\b/i,
+    /\bstart\s*your\s*free\s*trial\b/i,
+    /\bwebinar\b/i,
+    /\bmasterclass\b/i,
+    /\beducational\s*offer\b/i,
+    /\bproduct\s*announcement\b/i,
+    /\bmarketing\b/i,
+    /\baffiliate\b/i
+  ];
+
+  return promotionalPatterns.some(pattern => pattern.test(combined));
+}
+
+export function hasRecurringEvidence(text: string): boolean {
+  const t = text.toLowerCase();
+  return (
+    /\bmonthly\b/.test(t) ||
+    /\bannually\b/.test(t) ||
+    /\byearly\b/.test(t) ||
+    /\bevery\s*month\b/.test(t) ||
+    /\brecurring\b/.test(t) ||
+    /\brenewal\b/.test(t) ||
+    /\bnext\s*billing\s*date\b/.test(t) ||
+    /\bnext\s*renewal\b/.test(t) ||
+    /\bbilling\s*cycle\b/.test(t) ||
+    /\bsubscription\s*period\b/.test(t) ||
+    /\bauto-?renew(s|al)?\b/.test(t)
+  );
+}
+
+export function hasPaymentEvidence(text: string): boolean {
+  const t = text.toLowerCase();
+  return (
+    /payment\s*(of\s*[^ ]+)?\s*was\s*(processed|successful)/.test(t) ||
+    /you\s*were\s*charged/.test(t) ||
+    /payment\s*successful/.test(t) ||
+    /payment\s*received/.test(t) ||
+    /receipt\s*for\s*(your\s*)?subscription/.test(t) ||
+    /invoice\s*for\s*(your\s*)?subscription/.test(t) ||
+    /renewal\s*payment/.test(t) ||
+    /recurring\s*payment/.test(t) ||
+    /billing\s*confirmation/.test(t) ||
+    /monthly\s*payment\s*of\s*.*was\s*processed/.test(t) ||
+    /annual\s*payment\s*of\s*.*was\s*processed/.test(t)
+  );
+}
+
+export function hasSubscriptionEvidence(text: string): boolean {
+  const t = text.toLowerCase();
+  return (
+    /subscription\s*has\s*been\s*renewed/.test(t) ||
+    /subscription\s*is\s*active/.test(t) ||
+    /membership\s*has\s*been\s*renewed/.test(t) ||
+    /plan\s*has\s*renewed/.test(t) ||
+    /monthly\s*subscription\s*payment/.test(t) ||
+    /annual\s*subscription\s*payment/.test(t) ||
+    /subscription\s*will\s*renew\s*on/.test(t)
+  );
+}
+
 // ============================================================================
 // Gmail API Helpers
 // ============================================================================
@@ -215,7 +296,7 @@ export class GmailProvider {
   /**
    * Scans Gmail for subscription-related emails and returns structured data.
    */
-  async scanEmails(userEmail: string): Promise<GmailScanResult> {
+  async scanEmails(userId: string, userEmail: string): Promise<GmailScanResult> {
     const scanId = `gmail_scan_${Date.now()}`;
     const scannedAt = new Date().toISOString();
 
@@ -244,7 +325,7 @@ export class GmailProvider {
     // Step 3: Convert extractions to EmailEvent[] for Block 1
     const events: EmailEvent[] = extractions.map((ext, index) => ({
       event_id: `gmail_${ext.sourceEmailId}_${index}`,
-      user_id: 'u_301',
+      user_id: userId,
       subject: ext.subject,
       sender: ext.sender,
       date: ext.date,
@@ -371,20 +452,56 @@ export class GmailProvider {
     const eventType = classifyEmailType(subject, `${snippet} ${bodyText.slice(0, 500)}`);
     const cadence = detectCadence(subject, `${snippet} ${bodyText.slice(0, 500)}`);
 
-    // Build evidence
+    // ============================================================================
+    // GMAIL STRICT RELEVANCE FILTER (COMBINED EVIDENCE MODEL)
+    // ============================================================================
+    
+    // We must have a clear merchant to proceed.
+    if (!merchant) return null;
+
+    const isPromo = isPromotionalEmail(subject, combinedText);
+    const hasRec = hasRecurringEvidence(combinedText) || (cadence !== null);
+    const hasPay = hasPaymentEvidence(combinedText);
+    const hasSub = hasSubscriptionEvidence(combinedText);
+
+    // Core rule: We need a Merchant + (Payment AND Recurring evidence) OR (Subscription evidence).
+    // If it's promotional, we must have VERY strong payment AND subscription evidence to overcome it.
+    
+    let isCandidate = false;
+
+    if (isPromo) {
+      // If promotional, require explicit payment AND subscription proof (e.g. they actually paid and subscribed after a trial)
+      if (amountResult && hasPay && hasSub) {
+        isCandidate = true;
+      }
+    } else {
+      // Normal email
+      if ((hasPay && hasRec && amountResult) || hasSub) {
+        isCandidate = true;
+      }
+    }
+
+    if (!isCandidate) {
+      return null;
+    }
+    // ============================================================================
+
+    // Build comprehensive evidence array for transparency
     const evidence: string[] = [];
-    if (merchant) evidence.push(`From/Content: ${merchant}`);
+    evidence.push(`Merchant detected: ${merchant}`);
     if (amountResult) evidence.push(`Amount: ${amountResult.currency} ${amountResult.amount}`);
     if (cadence) evidence.push(`Cadence: ${cadence}`);
+    if (hasPay) evidence.push(`Evidence: payment confirmation`);
+    if (hasRec) evidence.push(`Evidence: recurring billing`);
+    if (hasSub) evidence.push(`Evidence: subscription identified`);
     if (eventType !== 'other') evidence.push(`Type: ${eventType}`);
-    evidence.push(`Subject: ${subject.slice(0, 100)}`);
 
-    // Calculate confidence based on extracted fields
-    let confidence = 40; // base confidence for matching search query
-    if (merchant) confidence += 20;
-    if (amountResult) confidence += 20;
-    if (cadence) confidence += 10;
-    if (eventType !== 'other') confidence += 15;
+    // Calculate confidence strictly based on combined signals
+    let confidence = 50; 
+    if (hasPay) confidence += 20;
+    if (hasSub) confidence += 20;
+    if (hasRec) confidence += 10;
+    if (merchant && merchant !== 'Unknown Sender') confidence += 5;
     confidence = Math.min(confidence, 100);
 
     // Parse date

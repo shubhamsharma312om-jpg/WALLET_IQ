@@ -1,0 +1,839 @@
+{
+  "source": "gmail",
+  "scanStatus": "success",
+  "scannedAt": "2026-09-19T05:33:23.832Z",
+  "emailsScanned": 200,
+  "relevantEmails": 27,
+  "subscriptionsDetected": 27,
+  "emails": [
+    {
+      "event_id": "gmail_1a0b811f4ffcfd91_0",
+      "user_id": "u_301",
+      "subject": "[Netlify] You've used 50% of your credits on kaizo",
+      "sender": "Netlify <team@netlify.com>",
+      "date": "2026-09-19T05:09:39.000Z",
+      "snippet": "From/Content: Netlify. Subject: [Netlify] You've used 50% of your credits on kaizo",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0b811f4ffcfd91",
+        "merchant": "Netlify",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a0b7828c51254ca_1",
+      "user_id": "u_301",
+      "subject": "⌛️ Final days: Coursera Plus for ₹7,499/year",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-09-19T02:33:00.000Z",
+      "snippet": "From/Content: Coursera. Amount: INR 7.49. Subject: ⌛️ Final days: Coursera Plus for ₹7,499/year",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0b7828c51254ca",
+        "merchant": "Coursera",
+        "amount": 7.49,
+        "currency": "INR",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a0b74c00a713a09_2",
+      "user_id": "u_301",
+      "subject": "Your Spotify Premium subscription has been renewed",
+      "sender": "Zooom Z <zoompg8@gmail.com>",
+      "date": "2026-09-19T01:33:13.000Z",
+      "snippet": "From/Content: Spotify. Amount: INR 119. Cadence: monthly. Type: renewal_notice. Subject: Your Spotify Premium subscription has been renewed",
+      "event_type": "renewal_notice",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0b74c00a713a09",
+        "merchant": "Spotify",
+        "amount": 119,
+        "currency": "INR",
+        "cadence": "monthly",
+        "confidence": 100
+      }
+    },
+    {
+      "event_id": "gmail_1a0ad35c45eae7ba_3",
+      "user_id": "u_301",
+      "subject": "🎓 Ends soon: Get Coursera Plus for ₹7,499/year",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-09-17T02:32:56.000Z",
+      "snippet": "From/Content: Coursera. Amount: INR 7.49. Subject: 🎓 Ends soon: Get Coursera Plus for ₹7,499/year",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0ad35c45eae7ba",
+        "merchant": "Coursera",
+        "amount": 7.49,
+        "currency": "INR",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a0aab3f4ce10aee_4",
+      "user_id": "u_301",
+      "subject": "Fee Payment Received - KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY",
+      "sender": "KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY <MVA@myclassboard.in>",
+      "date": "2026-09-16T14:51:55.000Z",
+      "snippet": "From/Content: KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY. Type: receipt. Subject: Fee Payment Received - KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY",
+      "event_type": "receipt",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0aab3f4ce10aee",
+        "merchant": "KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY",
+        "confidence": 75
+      }
+    },
+    {
+      "event_id": "gmail_1a0964ae6abd8ad6_5",
+      "user_id": "u_301",
+      "subject": "🫣 Time's almost up — ₹7,499/year for Coursera Plus",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-09-12T15:44:46.000Z",
+      "snippet": "From/Content: Coursera. Amount: INR 7.49. Subject: 🫣 Time's almost up — ₹7,499/year for Coursera Plus",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0964ae6abd8ad6",
+        "merchant": "Coursera",
+        "amount": 7.49,
+        "currency": "INR",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a09216a9051fa96_6",
+      "user_id": "u_301",
+      "subject": "⚡️ Save 40% on three months of Coursera Plus ",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-09-11T20:09:12.000Z",
+      "snippet": "From/Content: Coursera. Amount: USD 35.4. Subject: ⚡️ Save 40% on three months of Coursera Plus ",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a09216a9051fa96",
+        "merchant": "Coursera",
+        "amount": 35.4,
+        "currency": "USD",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a08929eb3c6d59a_7",
+      "user_id": "u_301",
+      "subject": "🚨 Now ₹7,499/year: Don’t miss this Coursera offer",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-09-10T02:33:40.000Z",
+      "snippet": "From/Content: Coursera. Amount: INR 7.49. Subject: 🚨 Now ₹7,499/year: Don’t miss this Coursera offer",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a08929eb3c6d59a",
+        "merchant": "Coursera",
+        "amount": 7.49,
+        "currency": "INR",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a07bd7f05e80397_8",
+      "user_id": "u_301",
+      "subject": "First-year at college? This scholarship could cover up to INR 2,00,000 of it",
+      "sender": "Buddy4Study <mailer@b4sletter.in>",
+      "date": "2026-09-07T12:29:03.000Z",
+      "snippet": "From/Content: Buddy4Study. Amount: INR 2. Cadence: yearly. Subject: First-year at college? This scholarship could cover up to INR 2,00,000 of it",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a07bd7f05e80397",
+        "merchant": "Buddy4Study",
+        "amount": 2,
+        "currency": "INR",
+        "cadence": "yearly",
+        "confidence": 90
+      }
+    },
+    {
+      "event_id": "gmail_1a074e88dee20e7f_9",
+      "user_id": "u_301",
+      "subject": "Coursera Plus ₹7,499/year: Short courses, standout skills",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-09-06T04:09:52.000Z",
+      "snippet": "From/Content: Coursera. Amount: INR 7.49. Subject: Coursera Plus ₹7,499/year: Short courses, standout skills",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a074e88dee20e7f",
+        "merchant": "Coursera",
+        "amount": 7.49,
+        "currency": "INR",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a06db4b7f84315e_10",
+      "user_id": "u_301",
+      "subject": "Your team, one Runway workspace",
+      "sender": "Runway <no-reply@comms.runwayml.com>",
+      "date": "2026-09-04T18:35:54.000Z",
+      "snippet": "From/Content: Runway. Amount: USD 69. Subject: Your team, one Runway workspace",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a06db4b7f84315e",
+        "merchant": "Runway",
+        "amount": 69,
+        "currency": "USD",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a06a9d5c01390c0_11",
+      "user_id": "u_301",
+      "subject": "🚀 ₹7,499/year: Build new skills with short courses",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-09-04T04:11:32.000Z",
+      "snippet": "From/Content: Coursera. Amount: INR 7.49. Subject: 🚀 ₹7,499/year: Build new skills with short courses",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a06a9d5c01390c0",
+        "merchant": "Coursera",
+        "amount": 7.49,
+        "currency": "INR",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a067e9572a22575_12",
+      "user_id": "u_301",
+      "subject": "Shubham, thanks for being a valued member",
+      "sender": "LinkedIn Premium <linkedin@em.linkedin.com>",
+      "date": "2026-09-03T15:35:39.000Z",
+      "snippet": "From/Content: LinkedIn Premium. Type: trial_ending. Subject: Shubham, thanks for being a valued member",
+      "event_type": "trial_ending",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a067e9572a22575",
+        "merchant": "LinkedIn Premium",
+        "confidence": 75
+      }
+    },
+    {
+      "event_id": "gmail_1a064b6f0d32fce0_13",
+      "user_id": "u_301",
+      "subject": "🔥 Upgrade What Matters — Win a Custom PC & More!",
+      "sender": "ASUS India <noreply@nedm.asus.com>",
+      "date": "2026-09-03T00:41:41.000Z",
+      "snippet": "From/Content: ASUS India. Amount: USD 15. Subject: 🔥 Upgrade What Matters — Win a Custom PC & More!",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a064b6f0d32fce0",
+        "merchant": "ASUS India",
+        "amount": 15,
+        "currency": "USD",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a04bcc6926a23d8_14",
+      "user_id": "u_301",
+      "subject": "Save big on Coursera Plus: Now ₹7,499/year",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-08-29T04:34:41.000Z",
+      "snippet": "From/Content: Coursera. Amount: INR 7.49. Subject: Save big on Coursera Plus: Now ₹7,499/year",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a04bcc6926a23d8",
+        "merchant": "Coursera",
+        "amount": 7.49,
+        "currency": "INR",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a0468c3a132561d_15",
+      "user_id": "u_301",
+      "subject": "Now ₹7,499/year: Learn from Microsoft experts",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-08-28T04:06:29.000Z",
+      "snippet": "From/Content: Coursera. Amount: INR 7.49. Subject: Now ₹7,499/year: Learn from Microsoft experts",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0468c3a132561d",
+        "merchant": "Coursera",
+        "amount": 7.49,
+        "currency": "INR",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a03d57cc986b9de_16",
+      "user_id": "u_301",
+      "subject": "Fee Payment Received - KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY",
+      "sender": "KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY <MVA@myclassboard.in>",
+      "date": "2026-08-26T09:12:39.000Z",
+      "snippet": "From/Content: KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY. Type: receipt. Subject: Fee Payment Received - KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY",
+      "event_type": "receipt",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a03d57cc986b9de",
+        "merchant": "KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY",
+        "confidence": 75
+      }
+    },
+    {
+      "event_id": "gmail_1a02cd1ff19fb8eb_17",
+      "user_id": "u_301",
+      "subject": "Coursera Plus now ₹7,499/year: Save on your next skill",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-08-23T04:12:34.000Z",
+      "snippet": "From/Content: Coursera. Amount: INR 7.49. Subject: Coursera Plus now ₹7,499/year: Save on your next skill",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a02cd1ff19fb8eb",
+        "merchant": "Coursera",
+        "amount": 7.49,
+        "currency": "INR",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a0205d9ff9dfb84_18",
+      "user_id": "u_301",
+      "subject": "✨ New from Microsoft: Learn Enterprise AI Governance",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-08-20T18:10:00.000Z",
+      "snippet": "From/Content: Coursera. Amount: USD 35.4. Subject: ✨ New from Microsoft: Learn Enterprise AI Governance",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0205d9ff9dfb84",
+        "merchant": "Coursera",
+        "amount": 35.4,
+        "currency": "USD",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a01839c47074a6e_19",
+      "user_id": "u_301",
+      "subject": "🚀 Now ₹7,499/year: Build skills for what's next",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-08-19T04:13:53.000Z",
+      "snippet": "From/Content: Coursera. Amount: INR 7.49. Subject: 🚀 Now ₹7,499/year: Build skills for what's next",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a01839c47074a6e",
+        "merchant": "Coursera",
+        "amount": 7.49,
+        "currency": "INR",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_1a017585779c56f9_20",
+      "user_id": "u_301",
+      "subject": "Shubham, thanks for being a valued member",
+      "sender": "LinkedIn Premium <linkedin@em.linkedin.com>",
+      "date": "2026-08-19T00:07:38.000Z",
+      "snippet": "From/Content: LinkedIn Premium. Subject: Shubham, thanks for being a valued member",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a017585779c56f9",
+        "merchant": "LinkedIn Premium",
+        "confidence": 60
+      }
+    },
+    {
+      "event_id": "gmail_1a013e9e88cc8b78_21",
+      "user_id": "u_301",
+      "subject": "Ready to Claim Your ROG Gamescom 2026 Prize? 👀",
+      "sender": "ASUS India <noreply@nedm.asus.com>",
+      "date": "2026-08-18T08:08:07.000Z",
+      "snippet": "From/Content: ASUS India. Amount: USD 10000. Subject: Ready to Claim Your ROG Gamescom 2026 Prize? 👀",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a013e9e88cc8b78",
+        "merchant": "ASUS India",
+        "amount": 10000,
+        "currency": "USD",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_19fd7c68fe7e27c1_22",
+      "user_id": "u_301",
+      "subject": "Learn AI from scratch – no experience needed",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-08-06T15:52:21.000Z",
+      "snippet": "From/Content: Coursera. Amount: USD 19.99. Subject: Learn AI from scratch – no experience needed",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "19fd7c68fe7e27c1",
+        "merchant": "Coursera",
+        "amount": 19.99,
+        "currency": "USD",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_19f9818defd8e068_23",
+      "user_id": "u_301",
+      "subject": "Earn a Google, IBM, or Meta cert with your Master's",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-07-25T07:06:34.000Z",
+      "snippet": "From/Content: Coursera. Amount: GBP 1.32. Subject: Earn a Google, IBM, or Meta cert with your Master's",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "19f9818defd8e068",
+        "merchant": "Coursera",
+        "amount": 1.32,
+        "currency": "GBP",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_19f61338e0e3aabe_24",
+      "user_id": "u_301",
+      "subject": "Get 3 months of Google AI Pro at no extra cost",
+      "sender": "Coursera <Coursera@m.learn.coursera.org>",
+      "date": "2026-07-14T15:16:35.000Z",
+      "snippet": "From/Content: Coursera. Amount: USD 19.99. Subject: Get 3 months of Google AI Pro at no extra cost",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "19f61338e0e3aabe",
+        "merchant": "Coursera",
+        "amount": 19.99,
+        "currency": "USD",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_19f3c21e38fb33e9_25",
+      "user_id": "u_301",
+      "subject": "Re:",
+      "sender": "Scholarship <scholarship@sitaramjindalfoundation.org>",
+      "date": "2026-07-07T10:31:16.000Z",
+      "snippet": "From/Content: Scholarship. Amount: INR 35. Subject: Re:",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "19f3c21e38fb33e9",
+        "merchant": "Scholarship",
+        "amount": 35,
+        "currency": "INR",
+        "confidence": 80
+      }
+    },
+    {
+      "event_id": "gmail_19f368bdfae2a1ca_26",
+      "user_id": "u_301",
+      "subject": "Your application to the IET India Scholarship Awards 2026",
+      "sender": "The IET <iet@email.ietinfo.org>",
+      "date": "2026-07-06T08:29:20.000Z",
+      "snippet": "From/Content: The IET. Subject: Your application to the IET India Scholarship Awards 2026",
+      "event_type": "other",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "19f368bdfae2a1ca",
+        "merchant": "The IET",
+        "confidence": 60
+      }
+    }
+  ],
+  "subscriptions": [
+    {
+      "subscription_id": "sub_gmail_0_1789796014202",
+      "merchant": "Netlify",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_1_1789796014202",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 7.49,
+      "currency": "INR",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_2_1789796014202",
+      "merchant": "Spotify",
+      "category": "general",
+      "amount": 119,
+      "currency": "INR",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 100,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_3_1789796014202",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 7.49,
+      "currency": "INR",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_4_1789796014202",
+      "merchant": "KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 75,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_5_1789796014202",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 7.49,
+      "currency": "INR",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_6_1789796014202",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 35.4,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_7_1789796014202",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 7.49,
+      "currency": "INR",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_8_1789796014202",
+      "merchant": "Buddy4Study",
+      "category": "general",
+      "amount": 2,
+      "currency": "INR",
+      "cadence": "yearly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 90,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_9_1789796014202",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 7.49,
+      "currency": "INR",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_10_1789796014202",
+      "merchant": "Runway",
+      "category": "general",
+      "amount": 69,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_11_1789796014202",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 7.49,
+      "currency": "INR",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_12_1789796014202",
+      "merchant": "LinkedIn Premium",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 75,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_13_1789796014202",
+      "merchant": "ASUS India",
+      "category": "general",
+      "amount": 15,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_14_1789796014202",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 7.49,
+      "currency": "INR",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_15_1789796014202",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 7.49,
+      "currency": "INR",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_16_1789796014202",
+      "merchant": "KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 75,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_17_1789796014202",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 7.49,
+      "currency": "INR",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_18_1789796014202",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 35.4,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_19_1789796014202",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 7.49,
+      "currency": "INR",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_20_1789796014202",
+      "merchant": "LinkedIn Premium",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_21_1789796014202",
+      "merchant": "ASUS India",
+      "category": "general",
+      "amount": 10000,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_22_1789796014202",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 19.99,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_23_1789796014202",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 1.32,
+      "currency": "GBP",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_24_1789796014202",
+      "merchant": "Coursera",
+      "category": "general",
+      "amount": 19.99,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_25_1789796014202",
+      "merchant": "Scholarship",
+      "category": "general",
+      "amount": 35,
+      "currency": "INR",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 80,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_26_1789796014202",
+      "merchant": "The IET",
+      "category": "general",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 60,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    }
+  ]
+}
