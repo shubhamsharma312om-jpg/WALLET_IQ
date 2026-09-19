@@ -1,0 +1,76 @@
+{
+  "source": "gmail",
+  "scanStatus": "success",
+  "scannedAt": "2026-09-19T08:35:19.961Z",
+  "emailsScanned": 9,
+  "relevantEmails": 2,
+  "subscriptionsDetected": 2,
+  "emails": [
+    {
+      "event_id": "gmail_1a0b89bfd7a29937_0",
+      "user_id": "u_practical",
+      "subject": "Monthly payment confirmation — RecipeBox Plus",
+      "sender": "Yasvantt <p.yasvantt@gmail.com>",
+      "date": "2026-09-19T07:39:48.000Z",
+      "snippet": "Merchant detected: Yasvantt. Amount: USD 6.99. Cadence: monthly. Evidence: payment confirmation. Evidence: recurring billing. Type: cancellation_confirmation",
+      "event_type": "cancellation_confirmation",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0b89bfd7a29937",
+        "merchant": "Yasvantt",
+        "amount": 6.99,
+        "currency": "USD",
+        "cadence": "monthly",
+        "confidence": 85
+      }
+    },
+    {
+      "event_id": "gmail_1a0b89a6153b7088_1",
+      "user_id": "u_practical",
+      "subject": "NoteNest Premium annual membership renewed",
+      "sender": "Yasvantt <p.yasvantt@gmail.com>",
+      "date": "2026-09-19T07:38:01.000Z",
+      "snippet": "Merchant detected: Yasvantt. Amount: USD 64.99. Cadence: yearly. Evidence: recurring billing. Evidence: subscription identified. Type: cancellation_confirmation",
+      "event_type": "cancellation_confirmation",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0b89a6153b7088",
+        "merchant": "Yasvantt",
+        "amount": 64.99,
+        "currency": "USD",
+        "cadence": "yearly",
+        "confidence": 85
+      }
+    }
+  ],
+  "subscriptions": [
+    {
+      "subscription_id": "sub_gmail_0_1789806921116",
+      "merchant": "Yasvantt",
+      "category": "general",
+      "amount": 6.99,
+      "currency": "USD",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 85,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    },
+    {
+      "subscription_id": "sub_gmail_1_1789806921116",
+      "merchant": "Yasvantt",
+      "category": "general",
+      "amount": 64.99,
+      "currency": "USD",
+      "cadence": "yearly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 85,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    }
+  ]
+}

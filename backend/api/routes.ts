@@ -33,8 +33,26 @@ import {
 } from '../../mock-data/index.ts';
 import { runAllTests } from '../../tests/run-all-tests.ts';
 import { Guardrails, WorkflowProgress } from '../models/index.ts';
+import { AutoCancelEngine } from '../services/auto-cancel-engine.ts';
 
 export function createApiRouter(): Router {
+
+  const router = Router();
+
+  // Primary database instance
+  const db = new SQLiteDatabase();
+
+  // Adapter configuration: By default, supports both Mock and Real Friend 1 HttpAdapter
+  let useLiveBlock1 = Boolean(process.env.BLOCK1_LIVE === 'true' || process.env.BLOCK1_BASE_URL);
+  const useLiveBlock2 = Boolean(process.env.BLOCK2_LIVE === 'true');
+  const useLiveBlock3 = Boolean(process.env.BLOCK3_LIVE === 'true');
+
+  let block1: IBlock1Adapter = useLiveBlock1 ? new Block1HttpAdapter() : new MockBlock1Adapter();
+  const block2 = useLiveBlock2 ? new Block2HttpAdapter() : new MockBlock2Adapter();
+  const block3 = useLiveBlock3 ? new Block3HttpAdapter() : new MockBlock3Adapter();
+
+    let orchestrator = new Orchestrator(block1, block2, block3, db);
+
   let autoCancelEngine = new AutoCancelEngine(db, orchestrator.block3Engine);
 
   // Background automation interval
@@ -50,21 +68,6 @@ export function createApiRouter(): Router {
       console.error('AutoCancel background check error:', err);
     }
   }, 10 * 1000); // Poll every 10 seconds for demo purposes
-  const router = Router();
-
-  // Primary database instance
-  const db = new SQLiteDatabase();
-
-  // Adapter configuration: By default, supports both Mock and Real Friend 1 HttpAdapter
-  let useLiveBlock1 = Boolean(process.env.BLOCK1_LIVE === 'true' || process.env.BLOCK1_BASE_URL);
-  const useLiveBlock2 = Boolean(process.env.BLOCK2_LIVE === 'true');
-  const useLiveBlock3 = Boolean(process.env.BLOCK3_LIVE === 'true');
-
-  let block1: IBlock1Adapter = useLiveBlock1 ? new Block1HttpAdapter() : new MockBlock1Adapter();
-  const block2 = useLiveBlock2 ? new Block2HttpAdapter() : new MockBlock2Adapter();
-  const block3 = useLiveBlock3 ? new Block3HttpAdapter() : new MockBlock3Adapter();
-
-  let orchestrator = new Orchestrator(block1, block2, block3, db);
 
   // Initialize DB on boot
   db.initialize().catch((err) => console.error('DB init failed:', err));
@@ -1035,5 +1038,7 @@ export function createApiRouter(): Router {
 
   return router;
 }
+
+
 
 

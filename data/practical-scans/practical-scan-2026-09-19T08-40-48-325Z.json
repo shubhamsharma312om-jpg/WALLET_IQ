@@ -1,0 +1,44 @@
+{
+  "source": "gmail",
+  "scanStatus": "success",
+  "scannedAt": "2026-09-19T08:40:35.979Z",
+  "emailsScanned": 200,
+  "relevantEmails": 1,
+  "subscriptionsDetected": 1,
+  "emails": [
+    {
+      "event_id": "gmail_1a0b74c00a713a09_0",
+      "user_id": "u_practical",
+      "subject": "Your Spotify Premium subscription has been renewed",
+      "sender": "Zooom Z <zoompg8@gmail.com>",
+      "date": "2026-09-19T01:33:13.000Z",
+      "snippet": "Merchant detected: Spotify. Amount: INR 119. Cadence: monthly. Evidence: recurring billing. Evidence: subscription identified. Type: renewal_notice",
+      "event_type": "renewal_notice",
+      "metadata": {
+        "source": "gmail",
+        "sourceEmailId": "1a0b74c00a713a09",
+        "merchant": "Spotify",
+        "amount": 119,
+        "currency": "INR",
+        "cadence": "monthly",
+        "confidence": 85
+      }
+    }
+  ],
+  "subscriptions": [
+    {
+      "subscription_id": "sub_gmail_0_1789807248327",
+      "merchant": "Spotify",
+      "category": "general",
+      "amount": 119,
+      "currency": "INR",
+      "cadence": "monthly",
+      "last_used_days_ago": 0,
+      "waste_score": 50,
+      "confidence": 85,
+      "risk": "low",
+      "status": "active",
+      "recommended_action": "review"
+    }
+  ]
+}
